@@ -2,8 +2,10 @@ import React from 'react';
 import {Formik, Form, Field, ErrorMessage} from "formik";
 import * as Yup from "yup";
 import axios from 'axios';
+import "./Cash.css"
+import Nav from "../NavigationBar/Nav"
 
-function inKind() {
+function donateNow() {
 
     const initialValues = {
         firstName: "",
@@ -11,11 +13,9 @@ function inKind() {
         email: "",
         number: "",
         address: "",
-        Type: "",
-        Quantity: "",
+        gender: "",
         amount: "",
-        RName: "",
-        RNum: "",
+        transactionID: "",
         request: 0,
         username: "Pending"
     }
@@ -26,22 +26,21 @@ function inKind() {
         email: Yup.string().min(7, "Short Email Address").required(),
         number: Yup.number().required(),
         address: Yup.string().min(10, "Short Address").required(),
-        Type: Yup.string().required(),
-        Quantity: Yup.number().required(),
+        gender: Yup.string().min(4).max(6, "Please input Male and Female Only").required(),
         amount: Yup.number().required(),
-        RName: Yup.string().required(),
-        RNum: Yup.number().required(),
+        transactionID: Yup.number().required(),
         request: Yup.number().required(),
         username: Yup.string().required(),
     });
     
     const onSubmit = (data) => {
-        axios.post("http://localhost:3001/inkind", data).then((response) => {
+        axios.post("http://localhost:3001/cash", data).then((response) => {
             console.log("Donated successfully");
         });
     }
 return (
     <div className="donate">
+        <Nav/>
         <h1 className="titleDonateNow">Donate Now</h1>
         <Formik initialValues={initialValues} onSubmit={onSubmit} validationSchema={validationSchema}>
             <Form className='donateForm'>
@@ -75,6 +74,8 @@ return (
                         type="number"
                         placeholder="Phone Number"
                     />
+                </div>
+                <div className="donateColumn">
                     <ErrorMessage name="address" element={<span />}/>
                     <Field
                         className="field"
@@ -82,21 +83,12 @@ return (
                         name="address"
                         placeholder="Address"
                     />
-                </div>
-                <div className="donateColumn">
-                    <ErrorMessage name="Type" element={<span />}/>
+                    <ErrorMessage name="gender" element={<span />}/>
                     <Field
                         className="field"
                         id="donateNowPost"
-                        name="Type"
-                        placeholder="Type"
-                    />
-                    <ErrorMessage name="Quantity" element={<span />}/>
-                    <Field
-                        className="field"
-                        id="donateNowPost"
-                        name="Quantity"
-                        placeholder="Quantity"
+                        name="gender"
+                        placeholder="Gender"
                     />
                     <ErrorMessage name="amount" element={<span />}/>
                     <Field
@@ -106,19 +98,13 @@ return (
                         type="number"
                         placeholder="Amount"
                     />
-                    <ErrorMessage name="RName" element={<span />}/>
+                    <ErrorMessage name="transactionID" element={<span />}/>
                     <Field
                         className="field"
                         id="donateNowPost"
-                        name="RName"
-                        placeholder="Rider Name"
-                    />
-                    <ErrorMessage name="RNum" element={<span />}/>
-                    <Field
-                        className="field"
-                        id="donateNowPost"
-                        name="RNum"
-                        placeholder="Rider Number"
+                        name="transactionID"
+                        type="number"
+                        placeholder="Transaction ID"
                     />
 
                     <button type="submit" className='btnDonate'>Donate</button>
@@ -132,4 +118,4 @@ return (
 )
 }
 
-export default inKind
+export default donateNow
