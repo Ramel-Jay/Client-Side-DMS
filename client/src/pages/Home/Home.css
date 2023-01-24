@@ -2,10 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
-.slideshow-container{
-    background: #1909ff;
+@font-face {
+    font-family: "Poppins-Bold";
+    src: url("/font/Poppins-Bold.otf");
+}
+
+@font-face {
+    font-family: "Poppins-Medium";
+    src: url("/font/Poppins-Medium.otf");
+}
+
+@font-face {
+    font-family: "Poppins-Semibold";
+    src: url("/font/Poppins-SemiBold.otf");
 }
 
 .slideshow-image{
-    max-width: 100vw;
+    width: 100%;
+    height: 40.2vw;
+}
+
+.donation-header {
+    font-family: "Poppins-Bold";
+    text-shadow: 0 0 7px rgba(255,255,255,.3), 0 0 3px rgba(255,255,255,.3);
+}
+
+.intro{
+    width: 100%;
+    left: 5%;
+    padding-top: 5vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 100px 0px 100px;
+}
+
+.intro-header{
+    font-family: "Poppins-Semibold";
+    font-size: 40px;
+}
+
+.intro-body{
+    font-family: "Poppins-Regular";
+    font-size: 25px;
 }
