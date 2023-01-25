@@ -40,18 +40,23 @@ function inKind() {
     
     const onSubmit = (data) => {
         axios.post("http://localhost:3001/inkind", data).then((response) => {
-            console.log("Donated successfully");
+            if (response.data) {
+                alert("Successful Donation");
+            }
+            else {
+                alert("Unsuccessful Donation");
+            }
         });
     }
 return (
     <div className="donate">
         <Nav/>
         <p className="cash-quote">" A piece of item is a greatest gift to the people who needs your help "</p>
-        <p style={{ textAlign:"center" }}>-Address: 352 Real St. Tacloban City, Philippines-</p>
+        <h3 style={{ textAlign:"center" }}>Delivery Address: 352 Real St. Tacloban City, Philippines</h3>
         <div className="donation-form">
         <Formik initialValues={initialValues} onSubmit={onSubmit} validationSchema={validationSchema}>
             <Form className="form-container">
-                <h1 className="donate-header">Donate Now</h1>
+                <h1 className="donate-header">IN KIND DONATION</h1>
                 <div className="donate-column">
                     <Field 
                         className="input-field"

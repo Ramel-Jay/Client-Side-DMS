@@ -40,14 +40,13 @@ function Nav() {
                         <li><a onClick={() => setIsOpen(true)} className="active">Donate Now</a></li>
                         <li><a href="index.html"><Link to="/">Home</Link></a></li>
                         <li><a href="index.html"><Link to="/about">About</Link></a></li>
-                        <li><a href="index.html"><Link to="/inKind">In Kind</Link></a></li>
                 </ul>
                 {showNavbar && 
                     <ul id="side-navbar" >
                         <li><a onClick={() => setIsOpen(true)} className="active">Donate Now</a></li>
                         <li><a href="index.html"><Link to="/">Home</Link></a></li>
                         <li><a href="index.html"><Link to="/about">About</Link></a></li>
-                        <li><a href="index.html"><Link to="/inKind">In Kind</Link></a></li>
+
                     </ul>
                 }
                 </div>

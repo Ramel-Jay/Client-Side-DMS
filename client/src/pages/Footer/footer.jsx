@@ -12,9 +12,9 @@ function footer() {
 				<img src={Logo} className="footer-logo" />
 
 				<p class="footer-links">
-					<a href="#" class="link-1"><Link to="/">Home</Link></a>
+					<a href="#" class="link-1"><Link to="/">Home<br></br></Link></a>
 				
-					<a href="#"><Link to="/about">About</Link></a>
+					<a href="#" class="link-1"><Link to="/about">About</Link></a>
 				</p>
 
 				<p class="footer-company-name">Capstone Project for ACLC College of Tacloban</p>
@@ -23,7 +23,7 @@ function footer() {
 			<div class="footer-center">
 
 				<div>
-					<p><span>352 Real St. Tacloban City</span> 6500 Tacloban City, Philippines</p>
+					<h3><span>352 Real St. Tacloban City</span> 6500 Tacloban City, Philippines</h3>
 				</div>
 
 				<div>

@@ -37,7 +37,12 @@ function donateNow() {
     
     const onSubmit = (data) => {
         axios.post("http://localhost:3001/cash", data).then((response) => {
-            console.log("Donated successfully");
+            if (response.data) {
+                alert("Successful Donation");
+            }
+            else {
+                alert("Unsuccessful Donation");
+            }
         });
     }
 return (
