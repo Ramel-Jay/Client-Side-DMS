@@ -7,6 +7,10 @@ import image2 from "./image/carousel2.jpg"
 import image3 from "./image/carousel3.jpg"
 import image4 from "./image/carousel4.jpg"
 import Footer from "../Footer/footer"
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import post1 from "./image/Image1.jpg";
+import post2 from "./image/Image2.jpg";
 
 function Home() {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -28,6 +32,10 @@ function Home() {
 
     }, [currentIndex]);
 
+    useEffect(() => {
+        AOS.init();
+    }, [])
+
 return (
     <div>
         <Nav/>
@@ -40,6 +48,16 @@ return (
                 or the smallest act of caring, all of which have the potential to turn a life around, a potential to 
                 help not just one person but the whole world.
             </p>
+        </div>
+        <div className="body-container">
+            <div data-aos="fade-down-right" className="img-container">
+                <img src={post1} className="img1"/>
+                <p className="img-description">Last January 5 2022 ACLC College of Tacloban was sent a relief goods to the Sogod Southern Leyte</p>
+            </div>
+            <div data-aos="fade-down-left" className="img-container">
+                <img src={post2} className="img1"/>
+                <p className="img-description">This last March 8 2022 ACLC College of Tacloban was bound to TABANGI Southern Leyte to give the relief goods to the families of Tabangi</p>
+            </div>
         </div>
         <Footer/>
     </div>

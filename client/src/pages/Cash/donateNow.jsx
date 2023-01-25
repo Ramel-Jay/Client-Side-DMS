@@ -58,7 +58,7 @@ return (
                         name="firstName"
                         placeholder="First Name"
                     />
-                    <ErrorMessage name="firstName" element={<span  className="error-message"/>}/>
+                    <ErrorMessage name="firstName" element={<span/>}/>
                     <br/>
                     <Field
                         className="input-field"
