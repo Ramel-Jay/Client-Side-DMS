@@ -52,11 +52,11 @@ return (
         <div className="body-container">
             <div data-aos="fade-down-right" className="img-container">
                 <img src={post1} className="img1"/>
-                <p className="img-description">"Last January 5 2022 ACLC College of Tacloban was sent a relief goods to the Sogod Southern Leyte"</p>
+                <p className="img-description">Last January 5, 2022, ACLC College of Tacloban sent relief goods to Sogod, Southern Leyte.</p>
             </div>
             <div data-aos="fade-down-left" className="img-container">
                 <img src={post2} className="img1"/>
-                <p className="img-description">"This last March 8 2022 ACLC College of Tacloban was bound to TABANGI Southern Leyte to give the relief goods to the families of Tabangi"</p>
+                <p className="img-description">ACLC College of Tacloban went to Tabangi, Southern Leyte to provide aid to the locals of the said place.</p>
             </div>
         </div>
         <Footer/>

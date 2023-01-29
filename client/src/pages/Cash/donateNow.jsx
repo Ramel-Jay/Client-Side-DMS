@@ -5,7 +5,8 @@ import axios from 'axios';
 import "./Cash.css"
 import Nav from "../NavigationBar/Nav";
 import Footer from "../Footer/footer";
-import Gcash from "./Image/Gcash.jpg"
+import payment from "./Image/cashpayment.png"
+
 
 function donateNow() {
 
@@ -48,11 +49,12 @@ function donateNow() {
 return (
     <div>
         <Nav/>
-        <p className="cash-quote">"Your financial support is a life changing to the people who wanted to change"</p>
+        <p className="cash-quote">"Giving is not just about making a decision, it's about making a difference."</p>
         <div className="payment">
-            <img src={Gcash} className="gcash-method"/>
-            <h3>GCASH METHOD</h3>
+        <img src={payment} className="cashpayment-method"/>
+        <h3>CASH DONATION PLATFORMS</h3> 
         </div>
+        
         <div className="donation-form">
             <Formik initialValues={initialValues} onSubmit={onSubmit} validationSchema={validationSchema}>
             <Form className="form-container">

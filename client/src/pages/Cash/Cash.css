@@ -17,8 +17,9 @@
     font-family: "Poppins-Medium";
 }
 
-.gcash-method{
-    width: 150px;
+.cashpayment-method{
+    width: 600px;
+    height: 300px;
 }
 
 .donation-form{

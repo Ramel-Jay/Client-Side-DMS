@@ -31,7 +31,7 @@ function footer() {
 				</div>
 
 				<div>
-					<p>aclclangmalakas@gmail.com</p>
+					<p>admissionoffice_aclctacloban@yahoo.com</p>
 				</div>
 
 			</div>

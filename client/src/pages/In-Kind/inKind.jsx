@@ -5,6 +5,7 @@ import axios from 'axios';
 import "./InKind.css"
 import Nav from "../NavigationBar/Nav"
 import Footer from "../Footer/footer";
+import payment from "./Image/kindpayment.png"
 
 function inKind() {
 
@@ -52,7 +53,11 @@ return (
     <div className="donate">
         <Nav/>
         <p className="cash-quote">" A piece of item is a greatest gift to the people who needs your help "</p>
+        <div className="payment">
+        <img src={payment} className="kindpayment-method"/>
         <h3 style={{ textAlign:"center" }}>Delivery Address: 352 Real St. Tacloban City, Philippines</h3>
+        </div>
+
         <div className="donation-form">
         <Formik initialValues={initialValues} onSubmit={onSubmit} validationSchema={validationSchema}>
             <Form className="form-container">
@@ -147,7 +152,7 @@ return (
                         className="input-field"
                         id="donateNowPost"
                         name="RNum"
-                        placeholder="Rider Number"
+                        placeholder="Tracking Number"
                     />
                     <ErrorMessage name="RNum" element={<span />}/>
                     <br/>
