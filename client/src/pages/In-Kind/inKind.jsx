@@ -52,10 +52,10 @@ function inKind() {
 return (
     <div className="donate">
         <Nav/>
-        <p className="cash-quote">" A piece of item is a greatest gift to the people who needs your help "</p>
+        <p className="cash-quote">"Real generosity towards the future lies in giving all to the present."</p>
         <div className="payment">
         <img src={payment} className="kindpayment-method"/>
-        <h3 style={{ textAlign:"center" }}><br></br>IN-KIND DONATION DELIVERY ADDRESS</h3>
+        <h3 style={{ textAlign:"center" }}><br></br>IN KIND DONATION DELIVERY ADDRESS</h3>
         </div>
 
         <div className="donation-form">
