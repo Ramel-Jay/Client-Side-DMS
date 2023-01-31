@@ -55,7 +55,7 @@ return (
         <p className="cash-quote">" A piece of item is a greatest gift to the people who needs your help "</p>
         <div className="payment">
         <img src={payment} className="kindpayment-method"/>
-        <h3 style={{ textAlign:"center" }}>Delivery Address: 352 Real St. Tacloban City, Philippines</h3>
+        <h3 style={{ textAlign:"center" }}><br></br>IN-KIND DONATION DELIVERY ADDRESS</h3>
         </div>
 
         <div className="donation-form">

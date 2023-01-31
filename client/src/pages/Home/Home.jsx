@@ -43,8 +43,8 @@ return (
             <img className="slideshow-image" src={images[currentIndex]} alt="slideshow"/>
         </div>
         <div className="intro">
-            <h3 className="intro-header">Let's Create Better world for everyone</h3>
-            <p className="intro-body">Too often we underestimate the power of a giving, sharing, a listening ear, 
+            <h3 className="intro-header">Let's create a better world for everyone!</h3>
+            <p className="intro-body">Too often we underestimate the power of giving, sharing, a listening ear, 
                 or the smallest act of caring, all of which have the potential to turn a life around, a potential to 
                 help not just one person but the whole world.
             </p>

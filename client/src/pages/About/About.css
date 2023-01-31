@@ -1,0 +1,47 @@
+@font-face {
+    font-family: "Poppins-Bold";
+    src: url("/font/Poppins-Bold.otf");
+}
+
+@font-face {
+    font-family: "Poppins-Medium";
+    src: url("/font/Poppins-Medium.otf");
+}
+
+.aboutdesign {
+    font-family: "Poppins-Semibold";
+    text-align: center;
+    font-size: 50px;
+}
+
+.team {
+    background: #001eff;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+    color: white;
+	width: 100%;
+    height: 500px;
+	padding: 30px 50px;
+}
+
+div.gallery {
+    margin: 5px;
+    border: 3px solid #ffffff;
+    float: left;
+    width: 238px;
+}
+  
+div.gallery:hover {
+    border: 3px solid rgb(255, 0, 0);
+}
+  
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+  
+div.desc {
+    padding: 15px;
+    text-align: center;
+    font-size: 11px;
+}
