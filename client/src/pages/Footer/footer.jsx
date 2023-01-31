@@ -23,12 +23,16 @@ function footer() {
 			<div class="footer-center">
 
 				<div>
-					<h3><span>352 Real St. Tacloban City</span> 6500 Tacloban City, Philippines</h3>
+					<p><span>352 Real St. Tacloban City</span> 6500 Tacloban City, Philippines</p>
 				</div>
+
+				<br/>
 
 				<div>
 					<p>0921 636 4057</p>
 				</div>
+
+				<br/>
 
 				<div>
 					<p>admissionoffice_aclctacloban@yahoo.com</p>

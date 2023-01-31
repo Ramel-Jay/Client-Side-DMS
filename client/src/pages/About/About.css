@@ -8,40 +8,191 @@
     src: url("/font/Poppins-Medium.otf");
 }
 
-.aboutdesign {
+@font-face {
+    font-family: "Poppins-Regular";
+    src: url("/font/Poppins-Regular.otf");
+}
+
+@font-face {
     font-family: "Poppins-Semibold";
+    src: url("/font/Poppins-SemiBold.otf");
+}
+
+.about-header {
+    font-family: "Poppins-Bold";
     text-align: center;
     font-size: 50px;
 }
 
-.team {
+.mission-container{
     background: #001eff;
+    display: flex;
+    justify-content:left;
+}
+
+.mission-header{
+    font-family: "Poppins-Bold";
+}
+
+.mission{
+    background: red;
+    width: 70%;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    border-radius: 500px 0px 500px 0px;
+    font-family: "Poppins-Regular";
+}
+
+.vision-container{
+    background: red;
+    display: flex;
+    justify-content:right;
+}
+
+.vision{
+    background: #001eff;
+    width: 70%;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    border-radius: 500px 0px 500px 0px;
+    font-family: "Poppins-Regular";
+}
+
+.team-header-container{
+    text-align: center;
+}
+
+.team-header{
+    font-family: "Poppins-Bold";
+}
+
+.team {
+    margin-top: 20px;
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
 	box-sizing: border-box;
-    color: white;
 	width: 100%;
     height: 500px;
 	padding: 30px 50px;
 }
 
-div.gallery {
+.gallery {
     margin: 5px;
-    border: 3px solid #ffffff;
+    border-radius: 50px 50px 50px 50px;
+    border: 3px solid #0011ff;
     float: left;
-    width: 238px;
+    width: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
-  
-div.gallery:hover {
+
+.gallery:hover {
     border: 3px solid rgb(255, 0, 0);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
-  
-div.gallery img {
-    width: 100%;
+
+.gallery img {
+    margin-top: 10px;
+    border-radius: 200px;
     height: auto;
+    width: 120px;
 }
-  
-div.desc {
+
+.desc {
     padding: 15px;
     text-align: center;
     font-size: 11px;
+}
+
+.gallery::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+@media screen and (max-width: 600px ){
+    .about-header {
+        font-family: "Poppins-Bold";
+        text-align: center;
+        font-size: 25px;
+    }
+
+    .mission-container{
+        background: #001eff;
+        display: flex;
+        justify-content:left;
+    }
+    
+    .mission-header{
+        font-family: "Poppins-Semibold";
+        font-size: 20px;
+    }
+    
+    .mission{
+        background: red;
+        width: 70%;
+        text-align: center;
+        padding: 20px;
+        color: white;
+        border-radius: 0px 0px 150px 0px;
+        font-family: "Poppins-Regular";
+        font-size: 15px;
+    }
+    
+    .vision-container{
+        background: red;
+        display: flex;
+        justify-content:right;
+    }
+    
+    .vision{
+        background: #001eff;
+        width: 70%;
+        text-align: center;
+        padding: 20px;
+        color: white;
+        border-radius: 150px 0px 0px 0px;
+        font-family: "Poppins-Regular";
+    }
+
+    
+.team-header-container{
+    text-align: center;
+}
+
+.team-header{
+    font-family: "Poppins-Semibold";
+}
+
+.team {
+    margin-top: 20px;
+	box-shadow: 0 1px 1px 0 rgba(7, 7, 7, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+    height: 1550px;
+	padding: 30px 50px;
+}
+
+.gallery {
+    margin: 5px;
+    border-radius: 50px 50px 50px 50px;
+    border: 3px solid #0011ff;
+    width: 220px;
+}
+
+.gallery img {
+    margin-top: 10px;
+    border-radius: 200px;
+    height: auto;
+    width: 120px;
+}
+
+.desc {
+    padding: 15px;
+    text-align: center;
+    font-size: 11px;
+}
 }
