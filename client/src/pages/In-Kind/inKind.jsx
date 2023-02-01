@@ -15,11 +15,11 @@ function inKind() {
         email: "",
         number: "",
         address: "",
-        Type: "",
-        Quantity: "",
+        type: "",
+        quantity: "",
         amount: "",
-        RName: "",
-        RNum: "",
+        rName: "",
+        rNum: "",
         request: 0,
         username: "Pending"
     }
@@ -30,11 +30,11 @@ function inKind() {
         email: Yup.string().min(7, "Short Email Address").required(),
         number: Yup.number().required(),
         address: Yup.string().min(10, "Short Address").required(),
-        Type: Yup.string().required(),
-        Quantity: Yup.number().required(),
+        type: Yup.string().required(),
+        quantity: Yup.number().required(),
         amount: Yup.number().required(),
-        RName: Yup.string().required(),
-        RNum: Yup.number().required(),
+        rName: Yup.string().required(),
+        rNum: Yup.number().required(),
         request: Yup.number().required(),
         username: Yup.string().required(),
     });
@@ -114,7 +114,7 @@ return (
                     <Field
                         className="input-field"
                         id="donateNowPost"
-                        name="Type"
+                        name="type"
                         placeholder="Type"
                     />
                     <ErrorMessage name="Type" element={<span />}/>
@@ -123,7 +123,7 @@ return (
                     <Field
                         className="input-field"
                         id="donateNowPost"
-                        name="Quantity"
+                        name="quantity"
                         placeholder="Quantity"
                     />
                     <ErrorMessage name="Quantity" element={<span />}/>
@@ -142,7 +142,7 @@ return (
                     <Field
                         className="input-field"
                         id="donateNowPost"
-                        name="RName"
+                        name="rName"
                         placeholder="Rider Name"
                     />
                     <ErrorMessage name="RName" element={<span />}/>
@@ -151,7 +151,7 @@ return (
                     <Field
                         className="input-field"
                         id="donateNowPost"
-                        name="RNum"
+                        name="rNum"
                         placeholder="Tracking Number"
                     />
                     <ErrorMessage name="RNum" element={<span />}/>

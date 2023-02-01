@@ -5,22 +5,22 @@ import { Link } from 'react-router-dom';
 
 function footer() {
     return (
-        <footer class="footer-distributed">
+        <footer className="footer-distributed">
 
-			<div class="footer-left">
+			<div className="footer-left">
 
 				<img src={Logo} className="footer-logo" />
 
-				<p class="footer-links">
-					<a href="#" class="link-1"><Link to="/">Home<br></br></Link></a>
+				<p className="footer-links">
+					<a href="#" className="link-1"><Link to="/">Home<br></br></Link></a>
 				
-					<a href="#" class="link-1"><Link to="/about">About</Link></a>
+					<a href="#" className="link-1"><Link to="/about">About</Link></a>
 				</p>
 
-				<p class="footer-company-name">Capstone Project for ACLC College of Tacloban</p>
+				<p className="footer-company-name">Capstone Project for ACLC College of Tacloban</p>
 			</div>
 
-			<div class="footer-center">
+			<div className="footer-center">
 
 				<div>
 					<p><span>352 Real St. Tacloban City</span> 6500 Tacloban City, Philippines</p>
@@ -40,9 +40,9 @@ function footer() {
 
 			</div>
 
-			<div class="footer-right">
+			<div className="footer-right">
 
-				<p class="footer-company-about">
+				<p className="footer-company-about">
 					<span>About ACLC</span>
 					Established in 1986, ACLC stands for AMA Computer Learning Center, as it was originally a computer training center 
 					offering skill-based courses on computer hardware and software. To date, ACLC remain to be a popular choice for TESDA 
