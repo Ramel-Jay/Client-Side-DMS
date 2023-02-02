@@ -37,14 +37,14 @@ function Nav() {
                 <Logo className="logo"/>
                 <div>
                 <ul id="navbar" >
-                        <li><a onClick={() => setIsOpen(true)} className="active">Donate Now</a></li>
-                        <li><a href="index.html"><Link to="/">Home</Link></a></li>
+                        <li><a href="index.html"><Link to="/" className="active">Home</Link></a></li>
+                        <li><a onClick={() => setIsOpen(true)}>Donate Now</a></li>
                         <li><a href="index.html"><Link to="/about">About</Link></a></li>
                 </ul>
                 {showNavbar && 
                     <ul id="side-navbar" >
-                        <li><a onClick={() => setIsOpen(true)} className="active">Donate Now</a></li>
-                        <li><a href="index.html"><Link to="/">Home</Link></a></li>
+                        <li><a href="index.html"><Link to="/" className="active">Home</Link></a></li>
+                        <li><a onClick={() => setIsOpen(true)}>Donate Now</a></li>
                         <li><a href="index.html"><Link to="/about">About</Link></a></li>
 
                     </ul>
