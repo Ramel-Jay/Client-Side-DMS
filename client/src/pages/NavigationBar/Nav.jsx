@@ -38,13 +38,13 @@ function Nav() {
                 <div>
                 <ul id="navbar" >
                         <li><a href="index.html"><Link to="/" className="active">Home</Link></a></li>
-                        <li><a onClick={() => setIsOpen(true)}>Donate Now</a></li>
+                        <li><a onClick={() => setIsOpen(true)}>Donate</a></li>
                         <li><a href="index.html"><Link to="/about">About</Link></a></li>
                 </ul>
                 {showNavbar && 
                     <ul id="side-navbar" >
                         <li><a href="index.html"><Link to="/" className="active">Home</Link></a></li>
-                        <li><a onClick={() => setIsOpen(true)}>Donate Now</a></li>
+                        <li><a onClick={() => setIsOpen(true)}>Donate</a></li>
                         <li><a href="index.html"><Link to="/about">About</Link></a></li>
 
                     </ul>
@@ -70,7 +70,7 @@ function Nav() {
                 <div className="modal-container" ref={modalRef}>
                     <FaTimes onClick={() => setIsOpen(false)} className="btn-modal-close"/>
                     <div className="modal-header">
-                        <p>Choose Your Donation Type</p>
+                        <h4><center>CHOOSE YOUR TYPE OF DONATION</center></h4>
                     </div>
                     <div className="content">
                         <div className="btn-modal" onClick={() => {navigate("/donateNow")}}>

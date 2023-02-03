@@ -52,6 +52,7 @@ function inKind() {
 return (
     <div className="donate">
         <Nav/>
+        <><br></br><br></br><br></br><br></br></>
         <p className="cash-quote">"Real generosity towards the future lies in giving all to the present."</p>
         <div className="payment">
         <img src={payment} className="kindpayment-method"/>

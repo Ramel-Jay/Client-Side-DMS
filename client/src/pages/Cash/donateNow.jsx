@@ -49,6 +49,7 @@ function donateNow() {
 return (
     <div>
         <Nav/>
+        <><br></br><br></br><br></br><br></br></>
         <p className="cash-quote">"Giving is not just about making a decision, it's about making a difference."</p>
         <div className="payment">
         <img src={payment} className="cashpayment-method"/>
