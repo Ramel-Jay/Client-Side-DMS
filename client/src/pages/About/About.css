@@ -18,6 +18,10 @@
     src: url("/font/Poppins-SemiBold.otf");
 }
 
+.about-container{
+    background-color: aqua;
+}
+
 .about-header {
     font-family: "Poppins-Bold";
     text-align: center;

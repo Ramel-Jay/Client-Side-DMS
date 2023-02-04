@@ -16,23 +16,25 @@ return (
         <Nav/>
         <p className="about-header">ABOUT</p>
 
-        <div className="mission-container">
-            <div className="mission">
-                <h2 className="mission-header">MISSION</h2>
-                <p>To serve as an effective, hassle free, donation platform for ACLC's donation drive 
-                    and charity works, catering to donators all over the world and helping individuals 
-                    that are in need.
-                </p>
+        <div className="about-container">
+            <div className="mission-container">
+                <div className="mission">
+                    <h2 className="mission-header">MISSION</h2>
+                    <p>To serve as an effective, hassle free, donation platform for ACLC's donation drive 
+                        and charity works, catering to donators all over the world and helping individuals 
+                        that are in need.
+                    </p>
+                </div>
             </div>
-        </div>
 
-        <div className="vision-container">
-            <div className="vision">
-                <h2 className="mission-header">VISION</h2>
-                <p>To become AMA's main platform for its donation drive and charity works. To make a great 
-                    impact to everyone that receive aid and support through this system, seeing them happy,
-                    triumphant, and successful in life.
-                </p>
+            <div className="vision-container">
+                <div className="vision">
+                    <h2 className="mission-header">VISION</h2>
+                    <p>To become AMA's main platform for its donation drive and charity works. To make a great 
+                        impact to everyone that receive aid and support through this system, seeing them happy,
+                        triumphant, and successful in life.
+                    </p>
+                </div>
             </div>
         </div>
 
