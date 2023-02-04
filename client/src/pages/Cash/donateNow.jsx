@@ -5,7 +5,9 @@ import axios from 'axios';
 import "./Cash.css"
 import Nav from "../NavigationBar/Nav";
 import Footer from "../Footer/footer";
-import payment from "./Image/cashpayment.png"
+import payment from "./Image/cashpayment.png";
+import Gcash from "./Image/Gcash.png";
+import Paymaya from "./Image/Paymaya.png";
 
 
 function donateNow() {
@@ -51,11 +53,14 @@ return (
         <Nav/>
         <><br></br><br></br><br></br><br></br></>
         <p className="cash-quote">"Giving is not just about making a decision, it's about making a difference."</p>
-        <div className="payment">
-        <img src={payment} className="cashpayment-method"/>
-        <h3>CASH DONATION PLATFORMS</h3> 
+        <div className="payment-container">
+            <img src={Gcash} className="payment"/>
+            <img src={Paymaya} className="payment"/>
         </div>
-        
+        <h3 style={{ textAlign:"center" }}>CASH DONATION PLATFORMS</h3>
+
+        <p style={{ textAlign:"center" }}>If you are not a student at ACLC College of tacloban you can bypass the donator information form</p>
+
         <div className="donation-form">
             <Formik initialValues={initialValues} onSubmit={onSubmit} validationSchema={validationSchema}>
             <Form className="form-container">

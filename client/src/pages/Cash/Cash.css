@@ -8,13 +8,16 @@
     src: url("/font/Poppins-Medium.otf");
 }
 
-.payment{
+.payment-container{
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
     margin-bottom: 20px;
     font-family: "Poppins-Medium";
+}
+
+.payment{
+    margin: 40px;
+    width: 200px;
 }
 
 .cashpayment-method{
@@ -25,7 +28,7 @@
 .donation-form{
     width: 100%;
     height: 28vw;
-    background-color: #ff0000;
+    background-color: #DF2935;
     color: white;
     display: flex;
     justify-content: center;
@@ -33,7 +36,7 @@
 }
 
 .form-container{
-    background-color: #001eff;
+    background-color: #0047ab;
     margin-left: 180px;
     width: 70%;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
@@ -115,7 +118,7 @@
 
 .btnDonate {
     backface-visibility: hidden;
-    background-color: #fd7520;
+    background-color: #0047ab;
     border-radius: 6px;
     border-width: 0;
     box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
@@ -140,6 +143,10 @@
     width: 78%;
 }
 
+.btnDonate:hover{
+    background-color: #DF2935;
+}
+
 .btnDonate:disabled {
     cursor: default;
 }
@@ -159,12 +166,12 @@
     .donate-header{
         text-align: center;
         font-family: "Poppins-Bold";
-        font-size: 20px;
+        font-size: 16px;
     }
 
     .form-container{
-        background-color: #001eff;
-        margin-left: 60px;
+        background-color: #0047ab;
+        margin-left: 35px;
         width: 70%;
         box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
         border-radius: 30px;
@@ -198,7 +205,7 @@
 
     .btnDonate {
         backface-visibility: hidden;
-        background-color: #fd7520;
+        background-color: #0047ab;
         border-radius: 6px;
         border-width: 0;
         box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
@@ -223,4 +230,18 @@
         touch-action: manipulation;
         width: 78%;
     }
+
+    .payment-container{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+        font-family: "Poppins-Medium";
+        width: 100%;
+    }
+    
+    .payment{
+        margin: 40px;
+        width: 100px;
+    }
+    
 }

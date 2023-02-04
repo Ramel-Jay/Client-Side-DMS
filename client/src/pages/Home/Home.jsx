@@ -50,10 +50,10 @@ return (
         <div className="intro">
             <h3 className="intro-header">LET'S CREATE A BETTER WORLD FOR EVERYONE!</h3>
             <p className="intro-body">2023 could be the year where a little gets clean water for the first time, or a destitute family can eat
-             until they are full. You could help start a new year with hope – for the first time since they can remember. Choose to help a kababayan
-             in need, choose to donate in ACLC Cares.
+                until they are full. You could help start a new year with hope – for the first time since they can remember. Choose to help a kababayan
+                in need, choose to donate in ACLC Cares.
             </p>
-            <h1 button class="donatebtn">DONATE NOW</h1>
+            <button className="donatebtn">DONATE NOW</button>
         </div>
 
         <div className="body-container">

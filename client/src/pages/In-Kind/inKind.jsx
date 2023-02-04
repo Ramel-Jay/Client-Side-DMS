@@ -54,7 +54,7 @@ return (
         <Nav/>
         <><br></br><br></br><br></br><br></br></>
         <p className="cash-quote">"Real generosity towards the future lies in giving all to the present."</p>
-        <div className="payment">
+        <div className="address">
         <img src={payment} className="kindpayment-method"/>
         <h3 style={{ textAlign:"center" }}><br></br>IN KIND DONATION DELIVERY ADDRESS</h3>
         </div>

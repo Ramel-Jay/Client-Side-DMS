@@ -8,6 +8,13 @@
     src: url("/font/Poppins-Medium.otf");
 }
 
+.address{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .kindpayment-method{
     width: 410px;
     height: 260px;
