@@ -1,16 +1,22 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import {Formik, Form, Field, ErrorMessage} from "formik";
 import * as Yup from "yup";
 import axios from 'axios';
 import "./Cash.css"
 import Nav from "../NavigationBar/Nav";
 import Footer from "../Footer/footer";
-import payment from "./Image/cashpayment.png";
+// import payment from "./Image/cashpayment.png";
 import Gcash from "./Image/Gcash.png";
 import Paymaya from "./Image/Paymaya.png";
+import emailjs from '@emailjs/browser';
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
-function donateNow() {
+function DonateNow() {
+
+    const form = useRef();
 
     const initialValues = {
         firstName: "",
@@ -37,17 +43,37 @@ function donateNow() {
         request: Yup.number().required(),
         username: Yup.string().required(),
     });
+
+    const notify  = () => { 
+        toast("Donation Successful", {
+            position: "top-center",
+            autoClose: 2000,
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: false,
+            progress: undefined,
+            theme: "green",
+        })
+    }
     
     const onSubmit = (data) => {
         axios.post("http://localhost:3001/cash", data).then((response) => {
             if (response.data) {
-                alert("Successful Donation");
+                emailjs.sendForm('service_hq85ypr', 'template_exbhjbi', form.current, '5LX1ionb-UB4rjsW0')
+                .then((response) => {
+                    console.log(response.text);
+                    notify()
+                }, (error) => {
+                    console.log(error.text);
+                });
             }
             else {
                 alert("Unsuccessful Donation");
             }
         });
     }
+    
 return (
     <div>
         <Nav/>
@@ -63,7 +89,7 @@ return (
 
         <div className="donation-form">
             <Formik initialValues={initialValues} onSubmit={onSubmit} validationSchema={validationSchema}>
-            <Form className="form-container">
+            <Form className="form-container" ref={form}>
             <h1 className="donate-header">IN CASH DONATION</h1>
                 <div className="donate-column">
                     <Field 
@@ -140,7 +166,7 @@ return (
                     <ErrorMessage name="transactionID" element={<span />}/>
                     <br/>
                 </div>
-                <button type="submit" className='btnDonate'>Donate</button>
+                <button type="submit" className='btnDonate' onClick={notify}>Donate</button>
             </Form>
         </Formik>
         </div>
@@ -149,4 +175,4 @@ return (
 )
 }
 
-export default donateNow
+export default DonateNow
