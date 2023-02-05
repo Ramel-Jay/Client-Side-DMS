@@ -8,6 +8,10 @@ import Footer from "../Footer/footer";
 import payment from "./Image/kindpayment.png";
 import emailjs from '@emailjs/browser';
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
 function InKind() {
 
     const form = useRef();
@@ -47,8 +51,17 @@ function InKind() {
             if (response.data) {
                 emailjs.sendForm('service_hq85ypr', 'template_exbhjbi', form.current, '5LX1ionb-UB4rjsW0')
                 .then((response) => {
-                    alert("Successful Donation");
                     console.log(response.text);
+                    toast.success('Donation Success', {
+                        position: "top-center",
+                        autoClose: 2000,
+                        hideProgressBar: true,
+                        closeOnClick: true,
+                        pauseOnHover: false,
+                        draggable: false,
+                        progress: undefined,
+                        theme: "light",
+                    });
                 }, (error) => {
                     console.log(error.text);
                 });
@@ -168,6 +181,18 @@ return (
                     <br/>
                 </div>
                 <button type="submit" className='btnDonate'>Donate</button>
+                <ToastContainer
+                    position="top-center"
+                    autoClose={2000}
+                    hideProgressBar
+                    newestOnTop={false}
+                    closeOnClick
+                    rtl={false}
+                    pauseOnFocusLoss
+                    draggable={false}
+                    pauseOnHover={false}
+                    theme="light"
+                />
             </Form>
         </Formik>
         </div>

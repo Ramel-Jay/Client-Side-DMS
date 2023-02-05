@@ -43,19 +43,6 @@ function DonateNow() {
         request: Yup.number().required(),
         username: Yup.string().required(),
     });
-
-    const notify  = () => { 
-        toast("Donation Successful", {
-            position: "top-center",
-            autoClose: 2000,
-            hideProgressBar: true,
-            closeOnClick: true,
-            pauseOnHover: false,
-            draggable: false,
-            progress: undefined,
-            theme: "green",
-        })
-    }
     
     const onSubmit = (data) => {
         axios.post("http://localhost:3001/cash", data).then((response) => {
@@ -63,7 +50,16 @@ function DonateNow() {
                 emailjs.sendForm('service_hq85ypr', 'template_exbhjbi', form.current, '5LX1ionb-UB4rjsW0')
                 .then((response) => {
                     console.log(response.text);
-                    notify()
+                    toast.success('Donation Success', {
+                        position: "top-center",
+                        autoClose: 2000,
+                        hideProgressBar: true,
+                        closeOnClick: true,
+                        pauseOnHover: false,
+                        draggable: false,
+                        progress: undefined,
+                        theme: "light",
+                    });
                 }, (error) => {
                     console.log(error.text);
                 });
@@ -166,7 +162,19 @@ return (
                     <ErrorMessage name="transactionID" element={<span />}/>
                     <br/>
                 </div>
-                <button type="submit" className='btnDonate' onClick={notify}>Donate</button>
+                <button type="submit" className='btnDonate'>Donate</button>
+                <ToastContainer
+                    position="top-center"
+                    autoClose={2000}
+                    hideProgressBar
+                    newestOnTop={false}
+                    closeOnClick
+                    rtl={false}
+                    pauseOnFocusLoss
+                    draggable={false}
+                    pauseOnHover={false}
+                    theme="light"
+                />
             </Form>
         </Formik>
         </div>
