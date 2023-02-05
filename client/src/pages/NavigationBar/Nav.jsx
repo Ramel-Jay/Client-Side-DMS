@@ -1,9 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react'
 import "./Nav.css";
 import { Link } from 'react-router-dom';
-// import logo from "./Image/ACLC-Logo.png";
+import aclc from "./Image/aclccares.png";
 import { FaBars, FaTimes } from 'react-icons/fa';
-import { ReactComponent as Logo } from './Image/aclc-logo.svg'
 import { GiReceiveMoney } from "react-icons/gi";
 import { MdToys } from "react-icons/md";
 import { useNavigate } from 'react-router-dom';
@@ -34,18 +33,18 @@ function Nav() {
     return (
         <div>
             <nav>
-                <Logo className="logo"/>
+                <img src={aclc} className="logo" onClick={() => navigate("/")}/>
                 <div>
                 <ul id="navbar" >
-                        <li><a href="index.html"><Link to="/" className="active">Home</Link></a></li>
+                        <li><a><Link to="/" className="active">Home</Link></a></li>
                         <li><a onClick={() => setIsOpen(true)}>Donate</a></li>
-                        <li><a href="index.html"><Link to="/about">About</Link></a></li>
+                        <li><a><Link to="/about">About</Link></a></li>
                 </ul>
                 {showNavbar && 
                     <ul id="side-navbar" >
                         <li><a href="index.html"><Link to="/" className="active">Home</Link></a></li>
-                        <li><a onClick={() => setIsOpen(true)}>Donate</a></li>
-                        <li><a href="index.html"><Link to="/about">About</Link></a></li>
+                        <li><a>Donate</a></li>
+                        <li><a><Link to="/about">About</Link></a></li>
 
                     </ul>
                 }

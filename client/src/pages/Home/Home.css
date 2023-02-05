@@ -26,14 +26,14 @@
 /* width */
 ::-webkit-scrollbar {
     width: 10px;
-  }
-  
+}
+
   /* Track */
-  ::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
     box-shadow: inset 0 0 5px grey; 
     border-radius: 10px;
-  }
-   
+}
+
   /* Handle */
   ::-webkit-scrollbar-thumb {
     background: #0047ab; 
@@ -67,6 +67,25 @@
 .donation-header {
     font-family: "Poppins-Bold";
     text-shadow: 0 0 7px rgba(255,255,255,.3), 0 0 3px rgba(255,255,255,.3);
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
 }
 
 .intro{
@@ -112,6 +131,8 @@
 
 .drivetitle {
     text-align: center;
+    font-family: "Poppins-Semibold";
+    font-size: 40px;
 }
 .body-container{
     width: 100%;
