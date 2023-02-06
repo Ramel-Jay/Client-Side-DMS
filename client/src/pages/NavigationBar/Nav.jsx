@@ -43,7 +43,7 @@ function Nav() {
                 {showNavbar && 
                     <ul id="side-navbar" >
                         <li><a href="index.html"><Link to="/" className="active">Home</Link></a></li>
-                        <li><a>Donate</a></li>
+                        <li><a onClick={() => setIsOpen(true)}>Donate</a></li>
                         <li><a><Link to="/about">About</Link></a></li>
 
                     </ul>
@@ -66,19 +66,25 @@ function Nav() {
             </nav>
             <div>
                 {isOpen && (
-                <div className="modal-container" ref={modalRef}>
-                    <FaTimes onClick={() => setIsOpen(false)} className="btn-modal-close"/>
-                    <div className="modal-header">
-                        <h4><center>CHOOSE YOUR TYPE OF DONATION</center></h4>
-                    </div>
-                    <div className="content">
-                        <div className="btn-modal" onClick={() => {navigate("/donateNow")}}>
-                            <GiReceiveMoney className="close-icon" onClick={() => {navigate("/donateNow")}}>Cash</GiReceiveMoney>
-                            <p className="name-icon">Cash</p>
+                <div ref={modalRef} className="home-modal">
+                    <div className="home-modal-content">
+                        <div className="modal-close">
+                            <button onClick={() => setIsOpen(false)}>
+                                <FaTimes className="home-modal-close"/>
+                            </button>
                         </div>
-                        <div className='btn-modal' onClick={() => {navigate("/inKind")}}>
-                            <MdToys className="close-icon" onClick={() => {navigate("/inKind")}}/>
-                            <p className="name-icon">Items</p>
+                        <div className="home-modal-header">
+                            <h3>Select your donation type</h3>
+                        </div>
+                        <div className="home-modal-body">
+                            <button onClick={() => navigate("/donateNow")}>
+                                <GiReceiveMoney onClick={() => navigate("/donateNow")} className="home-cash-logo"/>
+                                <p>Cash</p>
+                            </button>
+                            <button onClick={() => navigate("/inKind")}>
+                                <MdToys onClick={() => navigate("/inKind")} className="home-cash-logo"/>
+                                <p>Items</p>
+                            </button>
                         </div>
                     </div>
                 </div>

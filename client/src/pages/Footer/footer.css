@@ -8,3 +8,9 @@
 	font: 14px calibri;
 	padding: 30px 30px;
 }
+
+@media  screen and (max-width: 600px) {
+	.footerdesign{
+		width: 352px;
+	}
+}

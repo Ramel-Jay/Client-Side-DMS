@@ -1,7 +1,7 @@
 import React from 'react';
 import Nav from "../NavigationBar/Nav";
 import "./Home.css";
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import image1 from "./image/carousel1.png"
 import image2 from "./image/carousel2.jpg"
 import image3 from "./image/carousel3.jpg"
@@ -13,9 +13,18 @@ import 'aos/dist/aos.css';
 import post1 from "./image/Image1.jpg";
 import post2 from "./image/Image2.jpg";
 import benefits from "./image/benefits.png";
+import { FaTimes } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
+import { GiReceiveMoney } from "react-icons/gi";
+import { MdToys } from "react-icons/md";
 
 function Home() {
     const [currentIndex, setCurrentIndex] = useState(0);
+
+    const[isOpen, setIsOpen] = useState(false);
+    const modalRef = useRef(null);
+
+    const navigate = useNavigate();
 
     const images = [
         image1,
@@ -39,6 +48,20 @@ function Home() {
         AOS.init();
     }, [])
 
+    const handleClickOutside = (event) => {
+        if (modalRef.current && !modalRef.current.contains(event.target)) {
+            setIsOpen(false);
+        }
+    };
+
+    useEffect(() => {
+        document.addEventListener("mousedown", handleClickOutside);
+    
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    });
+
 return (
     <div>
         <Nav/>
@@ -53,7 +76,31 @@ return (
                 until they are full. You could help start a new year with hope – for the first time since they can remember. Choose to help a kababayan
                 in need, choose to donate in ACLC Cares.
             </p>
-            <button className="donatebtn">DONATE NOW</button>
+            <button className="donatebtn" onClick={() => setIsOpen(true)}>DONATE NOW</button>
+            {isOpen && (
+                <div ref={modalRef} className="home-modal">
+                    <div className="home-modal-content">
+                        <div className="modal-close">
+                            <button onClick={() => setIsOpen(false)}>
+                                <FaTimes className="home-modal-close"/>
+                            </button>
+                        </div>
+                        <div className="home-modal-header">
+                            <h3>Select your donation type</h3>
+                        </div>
+                        <div className="home-modal-body">
+                            <button onClick={() => navigate("/donateNow")}>
+                                <GiReceiveMoney onClick={() => navigate("/donateNow")} className="home-cash-logo"/>
+                                <p>Cash</p>
+                            </button>
+                            <button onClick={() => navigate("/inKind")}>
+                                <MdToys onClick={() => navigate("/inKind")} className="home-cash-logo"/>
+                                <p>Items</p>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            )}
         </div>
 
         <div className="body-container">

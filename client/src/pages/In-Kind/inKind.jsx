@@ -7,7 +7,7 @@ import Nav from "../NavigationBar/Nav"
 import Footer from "../Footer/footer";
 import payment from "./Image/kindpayment.png";
 import emailjs from '@emailjs/browser';
-
+import { useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -15,6 +15,7 @@ import 'react-toastify/dist/ReactToastify.css';
 function InKind() {
 
     const form = useRef();
+    
 
     const initialValues = {
         firstName: "",

@@ -9,7 +9,7 @@ import Footer from "../Footer/footer";
 import Gcash from "./Image/Gcash.png";
 import Paymaya from "./Image/Paymaya.png";
 import emailjs from '@emailjs/browser';
-
+import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -17,6 +17,8 @@ import 'react-toastify/dist/ReactToastify.css';
 function DonateNow() {
 
     const form = useRef();
+
+    const navigate = useNavigate();
 
     const initialValues = {
         firstName: "",
@@ -162,7 +164,7 @@ return (
                     <ErrorMessage name="transactionID" element={<span />}/>
                     <br/>
                 </div>
-                <button type="submit" className='btnDonate'>Donate</button>
+                <button type="submit" className='btnDonate' onClick={() => navigate("/")}>Donate</button>
                 <ToastContainer
                     position="top-center"
                     autoClose={2000}
