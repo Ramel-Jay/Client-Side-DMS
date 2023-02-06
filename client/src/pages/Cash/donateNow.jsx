@@ -21,6 +21,7 @@ function DonateNow() {
     const navigate = useNavigate();
 
     const initialValues = {
+        type: "",
         firstName: "",
         lastName: "",
         email: "",
@@ -34,6 +35,7 @@ function DonateNow() {
     }
 
     const validationSchema = Yup.object().shape({
+        type: Yup.string().required().notOneOf([""], "Please select a Type"),
         firstName: Yup.string().min(2, "Your Name is too short").required(),
         lastName: Yup.string().required(),
         email: Yup.string().min(7, "Short Email Address").required(),
@@ -90,6 +92,20 @@ return (
             <Form className="form-container" ref={form}>
             <h1 className="donate-header">IN CASH DONATION</h1>
                 <div className="donate-column">
+                    <Field
+                        className="select-field"
+                        id="donateNowPost"
+                        name="type"
+                        placeholder="Type"
+                        as="select"
+                    >
+                    <option value="" className="option-gender">Classification</option>
+                    <option value="Student" className="option-gender">Student</option>
+                    <option value="Employee" className="option-gender">Employee</option>
+                    <option value="Others" className="option-gender">Others</option>
+                    </Field>
+                        <ErrorMessage name="gender" element={<span />}/>
+                    <br/>
                     <Field 
                         className="input-field"
                         name="firstName"
@@ -164,7 +180,7 @@ return (
                     <ErrorMessage name="transactionID" element={<span />}/>
                     <br/>
                 </div>
-                <button type="submit" className='btnDonate' onClick={() => navigate("/")}>Donate</button>
+                <button type="submit" className='btnDonate'>Donate</button>
                 <ToastContainer
                     position="top-center"
                     autoClose={2000}
