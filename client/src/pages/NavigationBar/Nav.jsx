@@ -40,19 +40,26 @@ function Nav() {
                     <p onClick={() => navigate("/")}>Home</p>
                     <p onClick={() => setModal(true)}>Donate</p>
                     <p onClick={() => navigate("/about")}>About</p>
+                    <p onClick={() => navigate("/Contact")}>Contact</p>
                 </div>
                 <div className="toggle" onClick={handleToggle}>
                     {isOpen ? <FaTimes /> : <FaBars />}
                 </div>
                 <ul className={`links ${isOpen ? "show" : ""}`}>
                     <li>
-                        <p onClick={() => navigate("/")}>Home</p>
+                            <p onClick={() => navigate("/")}>Home</p>
                         </li>
+
                         <li>
-                        <p onClick={() => setModal(true)}>Donate</p>
+                            <p onClick={() => setModal(true)}>Donate</p>
                         </li>
+
                         <li>
-                        <p onClick={() => navigate("about")}>About</p>
+                            <p onClick={() => navigate("/about")}>About</p>
+                        
+                        <li>
+                            <p onClick={() => navigate("/Contact")}>Contact</p>
+                        </li>
                     </li>
                 </ul>
             </nav>

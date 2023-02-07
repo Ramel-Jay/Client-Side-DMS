@@ -25,9 +25,14 @@
     font-size: 50px;
 }
 
+.about-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
 .mission-container{
     display: flex;
-    justify-content:left;
 }
 
 .mission-header{
@@ -36,18 +41,18 @@
 
 .mission{
     background: #c1c1c1;
-    width: 50%;
+    width: 60%;
     text-align: center;
-    padding: 20px;
+    padding: 20px ;
     color: white;
     font-family: "Poppins-Regular";
     border-radius: 30px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-left: 150px;
 }
 
 .vision-container{
     display: flex;
-    justify-content:right;
 }
 
 .vision{
@@ -59,6 +64,7 @@
     color: white;
     border-radius: 30px;
     font-family: "Poppins-Regular";
+    margin-left: 250px;
 }
 
 .team-header-container{
