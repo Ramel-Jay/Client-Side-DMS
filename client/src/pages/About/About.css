@@ -31,24 +31,25 @@
     justify-content: space-around;
 }
 
+.content-header{
+    font-family: "Poppins-Bold";
+}
+
 .mission-container{
     display: flex;
 }
 
-.mission-header{
-    font-family: "Poppins-Bold";
-}
-
 .mission{
-    background: #c1c1c1;
-    width: 60%;
+    background: #0047ab;
+    width: 300px;
+    height: 420px;
     text-align: center;
     padding: 20px ;
     color: white;
     font-family: "Poppins-Regular";
-    border-radius: 30px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    margin-left: 150px;
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
 .vision-container{
@@ -56,15 +57,60 @@
 }
 
 .vision{
-    background: #c1c1c1;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    width: 50%;
+    background: #0047ab;
+    width: 300px;
+    height: 420px;
     text-align: center;
-    padding: 20px;
+    padding: 20px ;
     color: white;
-    border-radius: 30px;
     font-family: "Poppins-Regular";
-    margin-left: 250px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.values-container{
+    display: flex;
+}
+
+.values{
+    background: #0047ab;
+    width: 300px;
+    height: 420px;
+    text-align: center;
+    padding: 20px ;
+    color: white;
+    font-family: "Poppins-Regular";
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.mission-logo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    width: 130px;
+    height: 130px;
+}
+
+.vision-logo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 70px;
+    width: 130px;
+    height: 130px;
+}
+
+.values-logo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 130px;
+    width: 130px;
+    height: 130px;
 }
 
 .team-header-container{
@@ -76,6 +122,8 @@
 }
 
 .team {
+    background-color: #df2935;
+    color: white;
     margin-top: 20px;
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
 	box-sizing: border-box;
@@ -85,11 +133,12 @@
 }
 
 .gallery {
-    margin: 5px;
+    margin: 10px;
     border-radius: 50px 50px 50px 50px;
-    border: 3px solid #0011ff;
-    float: left;
-    width: 220px;
+    border: 3px solid #ffffff;
+    background-color: #0047ab;
+    float: left; /*Baralyuan ada ini pre para ma center*/
+    width: 230px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -112,6 +161,7 @@
     padding: 15px;
     text-align: center;
     font-size: 11px;
+
 }
 
 .gallery::after {
@@ -126,80 +176,41 @@
         text-align: center;
         font-size: 25px;
     }
-
-    .mission-container{
-        background: #001eff;
-        display: flex;
-        justify-content:left;
+ 
+    .team-header-container{
+        text-align: center;
     }
-    
-    .mission-header{
+
+    .team-header{
         font-family: "Poppins-Semibold";
-        font-size: 20px;
     }
-    
-    .mission{
-        background: red;
-        width: 70%;
+
+    .team {
+        margin-top: 20px;
+        box-shadow: 0 1px 1px 0 rgba(7, 7, 7, 0.12);
+        box-sizing: border-box;
+        width: 100%;
+        height: 1550px;
+        padding: 30px 50px;
+    }
+
+    .gallery {
+        margin: 5px;
+        border-radius: 50px 50px 50px 50px;
+        border: 3px solid #0011ff;
+        width: 220px;
+    }
+
+    .gallery img {
+        margin-top: 10px;
+        border-radius: 200px;
+        height: auto;
+        width: 120px;
+    }
+
+    .desc {
+        padding: 15px;
         text-align: center;
-        padding: 20px;
-        color: white;
-        border-radius: 0px 0px 150px 0px;
-        font-family: "Poppins-Regular";
-        font-size: 15px;
+        font-size: 11px;
     }
-    
-    .vision-container{
-        background: red;
-        display: flex;
-        justify-content:right;
-    }
-    
-    .vision{
-        background: #001eff;
-        width: 70%;
-        text-align: center;
-        padding: 20px;
-        color: white;
-        border-radius: 150px 0px 0px 0px;
-        font-family: "Poppins-Regular";
-    }
-
-    
-.team-header-container{
-    text-align: center;
-}
-
-.team-header{
-    font-family: "Poppins-Semibold";
-}
-
-.team {
-    margin-top: 20px;
-	box-shadow: 0 1px 1px 0 rgba(7, 7, 7, 0.12);
-	box-sizing: border-box;
-	width: 100%;
-    height: 1550px;
-	padding: 30px 50px;
-}
-
-.gallery {
-    margin: 5px;
-    border-radius: 50px 50px 50px 50px;
-    border: 3px solid #0011ff;
-    width: 220px;
-}
-
-.gallery img {
-    margin-top: 10px;
-    border-radius: 200px;
-    height: auto;
-    width: 120px;
-}
-
-.desc {
-    padding: 15px;
-    text-align: center;
-    font-size: 11px;
-}
 }

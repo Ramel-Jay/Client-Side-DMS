@@ -1,0 +1,85 @@
+@font-face {
+    font-family: "Poppins-Bold";
+    src: url("/font/Poppins-Bold.otf");
+}
+
+@font-face {
+    font-family: "Poppins-Medium";
+    src: url("/font/Poppins-Medium.otf");
+}
+
+@font-face {
+    font-family: "Poppins-Regular";
+    src: url("/font/Poppins-Regular.otf");
+}
+
+@font-face {
+    font-family: "Poppins-Semibold";
+    src: url("/font/Poppins-SemiBold.otf");
+}
+
+.contacts-header {
+    font-family: "Poppins-Bold";
+    text-align: center;
+    font-size: 50px;
+}
+
+.contacts-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.content-header{
+    font-family: "Poppins-Bold";
+}
+
+.inquiries-container{
+    display: flex;
+}
+
+.inquiries{
+    background: #0047ab;
+    width: 400px;
+    height: 200px;
+    text-align: center;
+    padding: 20px ;
+    color: white;
+    font-family: "Poppins-Regular";
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-left: 200px;
+    margin-right: 10px;
+}
+
+.location-container{
+    display: flex;
+}
+
+.location{
+    background: #0047ab;
+    width: 400px;
+    height: 200px;
+    text-align: center;
+    padding: 20px ;
+    color: white;
+    font-family: "Poppins-Regular";
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-left: 10px;
+    margin-right: 200px;
+}
+
+.email-color{
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    font-family: "Poppins-Regular";
+}
+
+.number-color {
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    font-family: "Poppins-Regular";
+}
+
+.email-design {
+    font-family: "Poppins-Regular";
+}

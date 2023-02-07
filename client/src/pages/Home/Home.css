@@ -168,7 +168,7 @@
 
 /* width */
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 5px;
 }
 
   /* Track */
@@ -233,6 +233,7 @@
 }
 
 .intro{
+    background-color: #df2935;
     width: 100%;
     left: 5%;
     padding-top: 5vw;
@@ -247,17 +248,19 @@
 .intro-header{
     font-family: "Poppins-Bold";
     font-size: 30px;
+    color: #ffffff;
 }
 
 .intro-body{
     font-family: "Poppins-Regular";
     font-size: 20px;
+    color: #ffffff;
 }
 
 .donatebtn {
     background-color: #0047ab;
     border: none;
-    color: #f8f7f2;
+    color: #ffffff;
     font-size: 25px;
     font-family: "Poppins-Bold";
     padding: 30px 50px;
@@ -270,7 +273,7 @@
 }
 
 .donatebtn:hover {
-    background-color: #df2935;
+    background-color: #013885;
 }
 
 .drivetitle {
@@ -293,8 +296,9 @@
 
 .img-description{
     display: flex;
+    text-align: justify;
     font-family: "Poppins-Regular";
-    font-size: 30px;
+    font-size: 20px;
     margin-left: 30px;
     justify-content: center;
     align-items: center;
@@ -303,6 +307,7 @@
 .benefits {
     background-color: #0047ab;
     color: white;
+    font-family: "Poppins-Semibold";
     width: 100%;
     padding-top: 3vw;
     padding-bottom: 3vw;
@@ -313,11 +318,20 @@
     align-items: center;
 }
 
+.benefits-text {
+    font-family: "Poppins-Regular";
+}
+
 @media  screen and (max-width: 600px) {
 
     .drivetitle{
         font-size: 25px;
         padding: 10px;
+    }
+
+    .slideshow-image{
+        width: 100%;
+        height: 50vw;
     }
 
     .intro{
@@ -340,6 +354,14 @@
     .intro-body{
         font-family: "Poppins-Regular";
         font-size: 12px;
+    }
+
+    .donatebtn {
+        font-size: 15px;
+        padding: 30px 30px;
+        margin-top: 10px;
+        margin-bottom: 30px;
+        border-radius: 50px;
     }
 
     .body-container{

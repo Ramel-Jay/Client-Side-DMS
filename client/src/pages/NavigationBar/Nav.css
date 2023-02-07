@@ -12,7 +12,7 @@
     font-family: "Poppins-SemiBold";
     src: url("/font/Poppins-SemiBold.otf");
 }
-/* Navbar.css */
+/* Navbar design */
 .navbar {
   display: flex;
   background-color: #ffffff;
@@ -23,6 +23,7 @@
   z-index: 10;
 }
 
+/*Font color words on nav*/
 .wide-nav{
   color: #020202;
   display: flex;
@@ -31,15 +32,17 @@
   align-items: center;
 }
 
+/*Font style words on nav*/
 .wide-nav p{
   justify-content: space-around;
   margin-left: 30px;
   font-family: "Poppins-Regular";
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 300px;
   cursor: pointer;
 }
 
+/*Hover color on navbar words*/
 .wide-nav p:hover{
   border-bottom: 2px solid #f50707;
   color: red;
