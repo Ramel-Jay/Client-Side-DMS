@@ -5,6 +5,7 @@ import DonateNow from "./pages/Cash/donateNow";
 import About from "./pages/About/About";
 import InKind from "./pages/In-Kind/inKind";
 import Contact from "./pages/Contacts/Contacts";
+import InvalidRoute from "./pages/InvalidRoute/InvalidRoute";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/about" exact element={<About />} />
           <Route path="/inKind" exact element={<InKind />} />
           <Route path="/Contact" exact element={<Contact />} />
+          <Route path="*" element={<InvalidRoute />} />
         </Routes>
       </Router>
     </div>

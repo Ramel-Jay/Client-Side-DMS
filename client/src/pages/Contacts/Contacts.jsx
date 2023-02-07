@@ -1,6 +1,7 @@
 import React from 'react';
 import Nav from "../NavigationBar/Nav";
 import Footer from "../Footer/footer";
+import "./Contacts.css";
 
 function Contacts() {
 return (
