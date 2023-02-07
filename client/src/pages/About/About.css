@@ -18,9 +18,6 @@
     src: url("/font/Poppins-SemiBold.otf");
 }
 
-.about-container{
-    background-color: aqua;
-}
 
 .about-header {
     font-family: "Poppins-Bold";
@@ -29,7 +26,6 @@
 }
 
 .mission-container{
-    background: #001eff;
     display: flex;
     justify-content:left;
 }
@@ -39,28 +35,29 @@
 }
 
 .mission{
-    background: red;
-    width: 70%;
+    background: #c1c1c1;
+    width: 50%;
     text-align: center;
     padding: 20px;
     color: white;
-    border-radius: 500px 0px 500px 0px;
     font-family: "Poppins-Regular";
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .vision-container{
-    background: red;
     display: flex;
     justify-content:right;
 }
 
 .vision{
-    background: #001eff;
-    width: 70%;
+    background: #c1c1c1;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 50%;
     text-align: center;
     padding: 20px;
     color: white;
-    border-radius: 500px 0px 500px 0px;
+    border-radius: 30px;
     font-family: "Poppins-Regular";
 }
 

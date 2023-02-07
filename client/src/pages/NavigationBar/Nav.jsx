@@ -1,75 +1,67 @@
 import React, { useState, useRef, useEffect } from 'react'
 import "./Nav.css";
-import { Link } from 'react-router-dom';
 import aclc from "./Image/aclccares.png";
-import { FaBars, FaTimes } from 'react-icons/fa';
 import { GiReceiveMoney } from "react-icons/gi";
 import { MdToys } from "react-icons/md";
 import { useNavigate } from 'react-router-dom';
+import { FaBars, FaTimes } from "react-icons/fa";
 
 function Nav() {
 
-    const [bars, setBars] = useState(true);
-    const [times, setTimes] = useState(false);
-    const [showNavbar, setShowNavbar] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
-    const modalRef = useRef(null);
-
     const navigate = new useNavigate();
 
-    const handleClickOutside = event => {
+    const handleToggle = () => {
+        setIsOpen(!isOpen);
+    };
+
+    const [ modal, setModal ] = useState(false);
+    const modalRef = useRef(null);
+
+    const handleClickOutside = (event) => {
         if (modalRef.current && !modalRef.current.contains(event.target)) {
-            setIsOpen(false);
+            setModal(false);
         }
     };
-    
+
     useEffect(() => {
         document.addEventListener("mousedown", handleClickOutside);
+    
         return () => {
             document.removeEventListener("mousedown", handleClickOutside);
         };
-    }, []);
+    });
 
     return (
         <div>
-            <nav>
-                <img src={aclc} className="logo" onClick={() => navigate("/")}/>
-                <div>
-                <ul id="navbar" >
-                        <li><a><Link to="/" className="active">Home</Link></a></li>
-                        <li><a onClick={() => setIsOpen(true)}>Donate</a></li>
-                        <li><a><Link to="/about">About</Link></a></li>
+            <nav className="navbar">
+                <img src={aclc} alt="Logo" className="logo" />
+                <div className="wide-nav">
+                    <p onClick={() => navigate("/")}>Home</p>
+                    <p onClick={() => setModal(true)}>Donate</p>
+                    <p onClick={() => navigate("/about")}>About</p>
+                </div>
+                <div className="toggle" onClick={handleToggle}>
+                    {isOpen ? <FaTimes /> : <FaBars />}
+                </div>
+                <ul className={`links ${isOpen ? "show" : ""}`}>
+                    <li>
+                        <p onClick={() => navigate("/")}>Home</p>
+                        </li>
+                        <li>
+                        <p onClick={() => setModal(true)}>Donate</p>
+                        </li>
+                        <li>
+                        <p onClick={() => navigate("about")}>About</p>
+                    </li>
                 </ul>
-                {showNavbar && 
-                    <ul id="side-navbar" >
-                        <li><a href="index.html"><Link to="/" className="active">Home</Link></a></li>
-                        <li><a onClick={() => setIsOpen(true)}>Donate</a></li>
-                        <li><a><Link to="/about">About</Link></a></li>
-
-                    </ul>
-                }
-                </div>
-                <div id="mobile">
-                    <i id="bar">
-                        {bars && <FaBars onClick={() => {
-                            setBars(false);
-                            setTimes(true);
-                            setShowNavbar(true);
-                        }} />}
-                        {times && <FaTimes onClick={() => {
-                            setTimes(false);
-                            setBars(true);
-                            setShowNavbar(false);
-                        }} />}
-                    </i>
-                </div>
             </nav>
-            <div>
-                {isOpen && (
+
+            {modal && (
                 <div ref={modalRef} className="home-modal">
                     <div className="home-modal-content">
                         <div className="modal-close">
-                            <button onClick={() => setIsOpen(false)}>
+                            <button onClick={() => setModal(false)}>
                                 <FaTimes className="home-modal-close"/>
                             </button>
                         </div>
@@ -88,8 +80,7 @@ function Nav() {
                         </div>
                     </div>
                 </div>
-                )}
-            </div>
+            )}
         </div>
     )
 }

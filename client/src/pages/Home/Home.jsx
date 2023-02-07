@@ -65,7 +65,6 @@ function Home() {
 return (
     <div>
         <Nav/>
-        <><br></br><br></br><br></br></>
         <div>
             <img className="slideshow-image" src={images[currentIndex]} alt="slideshow"/>
         </div>
