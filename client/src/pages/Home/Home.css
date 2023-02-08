@@ -285,6 +285,10 @@
     width: 100%;
 }
 
+.img-header {
+    font-family: "Poppins-Semibold";
+    font-size: 40px;
+}
 .img-container{
     margin: 50px; 
     display: flex;

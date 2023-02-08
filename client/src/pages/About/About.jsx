@@ -66,7 +66,7 @@ return (
                     <div className="desc">
                         <h6>Ramel Jay O. Cuña</h6>
                         <p>Project Lead Developer</p>
-                        <p>rameljay15@gmail.com</p>
+                        <p className='teammail-color'><a href="mailto:rameljay15@gmail.com">rameljay15@gmail.com</a></p>
                     </div>
                 </div>
 
@@ -77,7 +77,7 @@ return (
                     <div className="desc">
                         <h6>Andrei Christian N. Zabala</h6>
                         <p>Project Lead Developer</p>
-                        <p>andreichristianzabala@gmail.com</p>
+                        <p className='teammail-color'><a href="mailto:andreichristianzabala@gmail.com">andreichristianzabala@gmail.com</a></p>
                     </div>
                 </div>
 
@@ -88,7 +88,7 @@ return (
                     <div className="desc">
                         <h6>Bjorn Farinelli L. Orgen</h6>
                         <p>Developer</p>
-                        <p>bjornfarinelli@gmail.com</p>
+                        <p className='teammail-color'><a href="mailto:bjornfarinelli@gmail.com">bjornfarinelli@gmail.com</a></p>
                     </div>
                 </div>
 
@@ -99,7 +99,7 @@ return (
                     <div className="desc">
                         <h6>Kim L. Magbulugtong</h6>
                         <p>Research Leader</p>
-                        <p>kimpulga21@gmail.com</p>
+                        <p className='teammail-color'><a href="mailto:kimpulga21@gmail.com">kimpulga21@gmail.com</a></p>
                     </div>
                 </div>
 
@@ -110,7 +110,7 @@ return (
                     <div className="desc">
                         <h6>Melhebbford A. Bareja</h6>
                         <p>Researcher</p>
-                        <p>barejamel1@gmail.com</p>
+                        <p className='teammail-color'><a href="mailto:barejamel1@gmail.com">barejamel1@gmail.com</a></p>
                     </div>
                 </div>
             </div>

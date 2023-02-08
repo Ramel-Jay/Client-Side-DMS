@@ -4,9 +4,9 @@ import "./Home.css";
 import { useState, useEffect, useRef } from 'react';
 import image1 from "./image/carousel1.png"
 import image2 from "./image/carousel2.jpg"
-import image3 from "./image/carousel3.jpg"
+import image3 from "./image/carousel3.png"
 import image4 from "./image/carousel4.jpg"
-import image5 from "./image/carousel5.png"
+import image5 from "./image/carousel5.jpg"
 import Footer from "../Footer/footer"
 import AOS from 'aos';
 import 'aos/dist/aos.css';

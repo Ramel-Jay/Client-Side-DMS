@@ -82,6 +82,11 @@
     font-family: "Poppins-Regular";
 }
 
+.email-color a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
 .number-color {
     font-size: 20px;
     color: rgb(255, 255, 255);
@@ -96,4 +101,34 @@
     display: flex;
     justify-content: center;
     margin-bottom: 50px; 
+}
+
+@media screen and (max-width: 600px ){
+    .contacts-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .contacts-header {
+        font-family: "Poppins-Bold";
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .inquiries {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+        width: 300px;
+        height: 200px;
+    }
+
+    .location {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+        width: 300px;
+        height: 200px;
+    }
 }

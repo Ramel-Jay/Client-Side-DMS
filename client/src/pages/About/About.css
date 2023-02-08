@@ -167,7 +167,6 @@
     padding: 15px;
     text-align: center;
     font-size: 11px;
-
 }
 
 .gallery::after {
@@ -176,11 +175,60 @@
     display: table;
 }
 
+.teammail-color a{
+    font-size: 11px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-family: "Poppins-Regular";
+}
+
+.teammail-color a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+
 @media screen and (max-width: 600px ){
+    .about-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .mission{
+        width: 300px;
+        height: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+    }
+
+    .vision {
+        width: 300px;
+        height: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+    }
+
+    .values {
+        width: 300px;
+        height: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+    }
+
+    .about-gallery-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    
     .about-header {
         font-family: "Poppins-Bold";
         text-align: center;
-        font-size: 25px;
+        font-size: 30px;
     }
  
     .team-header-container{
