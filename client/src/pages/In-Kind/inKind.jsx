@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import {Formik, Form, Field, ErrorMessage} from "formik";
 import * as Yup from "yup";
 import axios from 'axios';
@@ -7,7 +7,6 @@ import Nav from "../NavigationBar/Nav"
 import Footer from "../Footer/footer";
 import payment from "./Image/kindpayment.png";
 import emailjs from '@emailjs/browser';
-import { useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -15,11 +14,13 @@ import 'react-toastify/dist/ReactToastify.css';
 function InKind() {
 
     const form = useRef();
-    
+    const [otherOption, setOtherOption] = useState(false);
 
     const initialValues = {
+        classification: "",
         firstName: "",
         lastName: "",
+        gender: "",
         email: "",
         number: "",
         address: "",
@@ -33,12 +34,14 @@ function InKind() {
     }
 
     const validationSchema = Yup.object().shape({
+        classification: Yup.string().required().notOneOf([""], "Please select a Classification"),
         firstName: Yup.string().required(),
         lastName: Yup.string().required(),
+        gender: Yup.string().required().notOneOf([""], "Please Select a Gender"),
         email: Yup.string().min(7, "Short Email Address").required(),
         number: Yup.number().required(),
         address: Yup.string().min(10, "Short Address").required(),
-        type: Yup.string().required(),
+        type: Yup.string().required().notOneOf([""], "Please Select a Type of Item"),
         quantity: Yup.number().required(),
         amount: Yup.number().required(),
         rName: Yup.string().required(),
@@ -83,9 +86,30 @@ return (
 
         <div className="donation-form">
         <Formik initialValues={initialValues} onSubmit={onSubmit} validationSchema={validationSchema}>
+            {({setFieldValue}) => (
             <Form className="form-container" ref={form}>
                 <h1 className="donate-header">IN KIND DONATION</h1>
                 <div className="donate-column">
+
+                <Field 
+                    as="select" 
+                    name="classification"
+                    className="select-field" 
+                    onChange={(e) => {
+                    setFieldValue('classification', e.target.value);
+                    setOtherOption(e.target.value === 'other');
+                }}>
+                    <option value="" className="option-gender">Classification</option>
+                    <option value="Student" className="option-gender">Student</option>
+                    <option value="Employee" className="option-gender">Employee</option>
+                    <option value="other" className="option-gender">Other</option>
+                </Field>
+                <br/>
+                {otherOption && (
+                    <Field type="text" name="classification" placeholder="Input Type" className="input-field" />
+                )}
+                <br/>
+
                     <Field 
                         className="input-field"
                         id="donateNowPost"
@@ -102,8 +126,8 @@ return (
                         placeholder="Last Name"
                     />
                     <ErrorMessage name="lastName" element={<span />}/>
+
                     <br/>
-                    
                     <Field
                         className="input-field"
                         id="donateNowPost"
@@ -135,12 +159,39 @@ return (
                 <div className="donate-column">
                     
                     <Field
-                        className="input-field"
+                        className="select-field"
                         id="donateNowPost"
-                        name="type"
-                        placeholder="Type"
-                    />
-                    <ErrorMessage name="Type" element={<span />}/>
+                        name="gender"
+                        placeholder="Gender"
+                        as="select"
+                    >
+                    <option value="" className="option-gender">Gender</option>
+                    <option value="Male" className="option-gender">Male</option>
+                    <option value="Female" className="option-gender">Female</option>
+                    </Field>
+                    <ErrorMessage name="gender" element={<span />}/>
+                    <br/>
+
+                    <Field 
+                    as="select" 
+                    name="type"
+                    className="select-field" 
+                    onChange={(e) => {
+                    setFieldValue('type', e.target.value);
+                    setOtherOption(e.target.value === 'other');
+                    }}>
+                        <option value="" className="option-gender">Select Type Of Item</option>
+                        <option value="Can Goods" className="option-gender">Can Goods</option>
+                        <option value="Aid Kit" className="option-gender">Aid Kit</option>
+                        <option value="Cloth" className="option-gender">Cloth</option>
+                        <option value="Toys" className="option-gender">Toys</option>
+                        <option value="School Supplies" className="option-gender">School Supplies</option>
+                        <option value="other" className="option-gender">Other</option>
+                    </Field>
+                    <br/>
+                    {otherOption && (
+                        <Field type="text" name="type" placeholder="Input Type" className="input-field" />
+                    )}
                     <br/>
                     
                     <Field
@@ -194,6 +245,7 @@ return (
                     theme="light"
                 />
             </Form>
+            )}
         </Formik>
         </div>
         <Footer/>
