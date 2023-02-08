@@ -35,7 +35,7 @@ function Nav() {
     return (
         <div>
             <nav className="navbar">
-                <img src={aclc} alt="Logo" className="logo" />
+                <img src={aclc} alt="Logo" className="logo" onClick={() => navigate("/")}/>
                 <div className="wide-nav">
                     <p onClick={() => navigate("/")}>Home</p>
                     <p onClick={() => setModal(true)}>Donate</p>

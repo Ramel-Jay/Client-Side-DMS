@@ -75,7 +75,7 @@
 }
 
 .input-field::placeholder{
-    color: #ffffff;
+    color: #b8b7b7;
 }
 
 .input-field:focus{
@@ -114,6 +114,22 @@
     font-family: "Poppins-Semibold";
     text-align: center;
     font-size: 50px;
+}
+.platform-container h3{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: "Poppins-Semibold";
+    padding: 0px 20px 0px 20px;
+}
+
+.platform-container p {
+    width: 100%;
+    text-align: center;
+    padding: 0px 15px 0px 15px;
+    font-family: "Poppins-Regular";
 }
 
 .btnDonate {
@@ -157,10 +173,41 @@
 
 @media screen and (max-width: 600px){
     .cash-quote{
-        padding-top: 25px;
         font-family: "Poppins-Semibold";
         text-align: center;
         font-size: 20px;
+        width: 94%;
+        padding: 25px 25px 0px 25px;
+    }
+    
+    .payment-container{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+        font-family: "Poppins-Medium";
+        width: 94%;
+        background-color: #DF2935;
+    }
+    
+    .payment{
+        width: 100px;
+    }
+
+    .platform-container h3{
+        width: 94%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-family: "Poppins-Semibold";
+        padding: 0px 20px 0px 20px;
+    }
+
+    .platform-container p {
+        width: 94%;
+        text-align: center;
+        padding: 0px 15px 0px 15px;
+        font-family: "Poppins-Regular";
     }
 
     .donate-header{
@@ -169,12 +216,17 @@
         font-size: 16px;
     }
 
+    .donation-form{
+        width: 94%;
+        background-color: #ffffff;
+    }
+
     .form-container{
         background-color: #0047ab;
         margin-left: 35px;
-        width: 70%;
+        width: 80%;
         box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-        border-radius: 30px;
+        border-radius: 20px;
         padding-top: 15px;
         padding-bottom: 15px;
         display: flex;
@@ -183,6 +235,7 @@
         align-items: center;
         font-family: "Poppins-Regular";
         font-size: 12px;
+        margin-bottom: 40px;
     }
 
     .input-field{
@@ -229,19 +282,6 @@
         -webkit-user-select: none;
         touch-action: manipulation;
         width: 78%;
-    }
-
-    .payment-container{
-        display: flex;
-        justify-content: center;
-        margin-bottom: 20px;
-        font-family: "Poppins-Medium";
-        width: 100%;
-    }
-    
-    .payment{
-        margin: 40px;
-        width: 100px;
     }
     
 }

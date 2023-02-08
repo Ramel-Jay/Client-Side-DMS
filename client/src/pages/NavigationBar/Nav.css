@@ -53,6 +53,7 @@
   height: 80px;
   width: 150px;
   margin-left: 80px;
+  cursor: pointer;
 }
 
 .toggle {

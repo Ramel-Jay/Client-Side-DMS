@@ -57,65 +57,66 @@ return (
                 <h1 className="team-header">MEET OUR TEAM</h1>
                 <p>Below are the individuals behind ACLC Cares.</p>
             </div>
-        
-            <div className="gallery">
-            <a target="_blank" href="https://www.facebook.com/loyTzy">
-                <img src={Ramel} alt="Ramel"></img>
-            </a>
-            <div className="desc">
-                <h6>Ramel Jay O. Cuña</h6>
-                <p>Project Lead Developer</p>
-                <p>rameljay15@gmail.com</p>
-            </div>
-            </div>
 
-            <div className="gallery">
-            <a target="_blank" href="https://www.facebook.com/AndreiZabala04/">
-                <img src={Andrei} alt="Andrei"></img>
-            </a>
-            <div className="desc">
-                <h6>Andrei Christian N. Zabala</h6>
-                <p>Project Lead Developer</p>
-                <p>andreichristianzabala@gmail.com</p>
-            </div>
-            </div>
+            <div className="about-gallery-container">
+                <div className="gallery">
+                    <a target="_blank" href="https://www.facebook.com/loyTzy">
+                        <img src={Ramel} alt="Ramel"></img>
+                    </a>
+                    <div className="desc">
+                        <h6>Ramel Jay O. Cuña</h6>
+                        <p>Project Lead Developer</p>
+                        <p>rameljay15@gmail.com</p>
+                    </div>
+                </div>
 
-            <div className="gallery">
-            <a target="_blank" href="https://www.facebook.com/bjornfarinelli">
-                <img src={Bjorn} alt="Bjorn"></img>
-            </a>
-            <div className="desc">
-                <h6>Bjorn Farinelli L. Orgen</h6>
-                <p>Developer</p>
-                <p>bjornfarinelli@gmail.com</p>
-            </div>
-            </div>
+                <div className="gallery">
+                    <a target="_blank" href="https://www.facebook.com/AndreiZabala04/">
+                        <img src={Andrei} alt="Andrei"></img>
+                    </a>
+                    <div className="desc">
+                        <h6>Andrei Christian N. Zabala</h6>
+                        <p>Project Lead Developer</p>
+                        <p>andreichristianzabala@gmail.com</p>
+                    </div>
+                </div>
 
-            <div className="gallery">
-            <a target="_blank" href="https://www.facebook.com/kim.pulgalagaday">
-                <img src={Kim} alt="Kim"></img>
-            </a>
-            <div className="desc">
-                <h6>Kim L. Magbulugtong</h6>
-                <p>Research Leader</p>
-                <p>kimpulga21@gmail.com</p>
-            </div>
-            </div>
+                <div className="gallery">
+                    <a target="_blank" href="https://www.facebook.com/bjornfarinelli">
+                        <img src={Bjorn} alt="Bjorn"></img>
+                    </a>
+                    <div className="desc">
+                        <h6>Bjorn Farinelli L. Orgen</h6>
+                        <p>Developer</p>
+                        <p>bjornfarinelli@gmail.com</p>
+                    </div>
+                </div>
 
-            <div className="gallery">
-            <a target="_blank" href="https://www.facebook.com/melmel.bareja">
-                <img src={Mel} alt="Mel"></img>
-            </a>
-            <div className="desc">
-                <h6>Melhebbford A. Bareja</h6>
-                <p>Researcher</p>
-                <p>barejamel1@gmail.com</p>
-            </div>
+                <div className="gallery">
+                    <a target="_blank" href="https://www.facebook.com/kim.pulgalagaday">
+                        <img src={Kim} alt="Kim"></img>
+                    </a>
+                    <div className="desc">
+                        <h6>Kim L. Magbulugtong</h6>
+                        <p>Research Leader</p>
+                        <p>kimpulga21@gmail.com</p>
+                    </div>
+                </div>
+
+                <div className="gallery">
+                    <a target="_blank" href="https://www.facebook.com/melmel.bareja">
+                        <img src={Mel} alt="Mel"></img>
+                    </a>
+                    <div className="desc">
+                        <h6>Melhebbford A. Bareja</h6>
+                        <p>Researcher</p>
+                        <p>barejamel1@gmail.com</p>
+                    </div>
+                </div>
             </div>
         </div>
         <Footer/>
     </div>
- 
 )
 }
 

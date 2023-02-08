@@ -2,17 +2,17 @@ import React from 'react';
 import Nav from "../NavigationBar/Nav";
 import "./Home.css";
 import { useState, useEffect, useRef } from 'react';
-import image1 from "./Image/carousel1.png"
-import image2 from "./Image/carousel2.jpg"
-import image3 from "./Image/carousel3.jpg"
-import image4 from "./Image/carousel4.jpg"
-import image5 from "./Image/carousel5.png"
+import image1 from "./image/carousel1.png"
+import image2 from "./image/carousel2.jpg"
+import image3 from "./image/carousel3.jpg"
+import image4 from "./image/carousel4.jpg"
+import image5 from "./image/carousel5.png"
 import Footer from "../Footer/footer"
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import post1 from "./Image/Image1.jpg";
-import post2 from "./Image/Image2.jpg";
-import benefits from "./Image/benefits.png";
+import post1 from "./image/Image1.jpg";
+import post2 from "./image/Image2.jpg";
+import benefits from "./image/benefits.png";
 import { FaTimes } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import { GiReceiveMoney } from "react-icons/gi";

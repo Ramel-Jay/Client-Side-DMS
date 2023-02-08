@@ -31,16 +31,17 @@ return (
             </div>
         </div>
         <br></br><br></br>
+        <div className="map-container">
             <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d581.7174074182899!2d125.00421038347547!3d11.238394661575192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3308772d3ec60a1b%3A0xa31812625d7ca506!2sACLC%20College!5e0!3m2!1sen!2sph!4v1675759536957!5m2!1sen!2sph" 
-                margin="auto"
-                width="100%" 
+                src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d581.7174074182899!2d125.00421038347547!3d11.238394661575192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3308772d3ec60a1b%3A0xa31812625d7ca506!2sACLC%20College!5e0!3m2!1sen!2sph!4v1675759536957!5m2!1sen!2sph'
+                margin={"auto"}
+                width="70%" 
                 height="450" 
-                style={{ border: "0" }} 
-                allowfullscreen="" 
+                allowFullScreen="" 
                 loading="lazy" 
-                referrerpolicy="no-referrer-when-downgrade">
+                referrerPolicy="no-referrer-when-downgrade">
             </iframe>
+        </div>
         <Footer/>
     </div>
 )

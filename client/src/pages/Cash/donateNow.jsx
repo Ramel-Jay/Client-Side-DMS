@@ -82,9 +82,10 @@ return (
             <img src={Gcash} className="payment"/>
             <img src={Paymaya} className="payment"/>
         </div>
-        <h3 style={{ textAlign:"center" }}>CASH DONATION PLATFORMS</h3>
-
-        <p style={{ textAlign:"center" }}>If you are not a student at ACLC College of tacloban you can bypass the donator information form</p>
+        <div className="platform-container">
+            <h3>CASH DONATION PLATFORMS</h3>
+            <p>Please Fill-Up this form after you donate "For School Reference"</p>
+        </div>
 
         <div className="donation-form">
             <Formik initialValues={initialValues} onSubmit={onSubmit} validationSchema={validationSchema}>

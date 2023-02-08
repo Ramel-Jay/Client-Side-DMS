@@ -18,6 +18,11 @@
     src: url("/font/Poppins-SemiBold.otf");
 }
 
+*{
+    margin: 0;
+    padding: 0;
+}
+
 .contacts-header {
     font-family: "Poppins-Bold";
     text-align: center;
@@ -49,6 +54,7 @@
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     margin-left: 200px;
     margin-right: 10px;
+    border-radius: 30px;
 }
 
 .location-container{
@@ -66,11 +72,13 @@
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     margin-left: 10px;
     margin-right: 200px;
+    border-radius: 30px;
 }
 
-.email-color{
+.email-color a{
     font-size: 20px;
     color: rgb(255, 255, 255);
+    text-decoration: none;
     font-family: "Poppins-Regular";
 }
 
@@ -82,4 +90,10 @@
 
 .email-design {
     font-family: "Poppins-Regular";
+}
+
+.map-container{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px; 
 }

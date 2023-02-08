@@ -1,3 +1,7 @@
+*{
+    margin: 0px;
+    padding:0px;
+}
 @font-face {
     font-family: "Poppins-Bold";
     src: url("/font/Poppins-Bold.otf");
@@ -28,7 +32,7 @@
 .about-container{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 .content-header{
@@ -48,8 +52,7 @@
     color: white;
     font-family: "Poppins-Regular";
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    margin-left: 100px;
-    margin-right: 100px;
+    border-radius: 30px;
 }
 
 .vision-container{
@@ -65,8 +68,7 @@
     color: white;
     font-family: "Poppins-Regular";
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    margin-left: 10px;
-    margin-right: 10px;
+    border-radius: 30px;
 }
 
 .values-container{
@@ -82,8 +84,7 @@
     color: white;
     font-family: "Poppins-Regular";
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    margin-left: 100px;
-    margin-right: 100px;
+    border-radius: 30px;
 }
 
 .mission-logo{
@@ -137,12 +138,17 @@
     border-radius: 50px 50px 50px 50px;
     border: 3px solid #ffffff;
     background-color: #0047ab;
-    float: left; /*Baralyuan ada ini pre para ma center*/
     width: 230px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+.about-gallery-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .gallery:hover {
