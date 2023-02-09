@@ -8,46 +8,88 @@
     src: url("/font/Poppins-Medium.otf");
 }
 
-.payment-container{
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
+.Background {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+.cash-quote{
     font-family: "Poppins-Medium";
-}
-
-.payment{
-    margin: 40px;
-    width: 200px;
-}
-
-.cashpayment-method{
-    width: 600px;
-    height: 300px;
-}
-
-.donation-form{
-    width: 100%;
-    height: 28vw;
-    background-color: #DF2935;
     color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-size: 32px;
+    margin-top: 120px;
+    margin-left: 40px;
+    float: left;
+}
+
+.instruction-box{
+    background: #0047ab;
+    width: 700px;
+    height: 210px;
+    margin-left: 610px;
+    margin-right: auto;
+    margin-bottom: 20px;
+    margin-top: 60px;
+    text-align: center;
+    color: white;
+    font-family: "Poppins-Regular";
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 30px;
+}
+
+.cash-header{
+    font-family: "Poppins-Bold";
+    font-size: 50px;
+}
+
+.instruction {
+    font-family: "Poppins-Regular";
+    font-size: 18px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.qrcode-box{
+    background: #ffffff;
+    width: 700px;
+    height: 270px;
+    margin-left: 610px;
+    margin-right: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 30px;
+}
+
+.qrcode{
+    width: 500px;
+    height: 500px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-header{
+    text-align: center;
+    font-family: "Poppins-SemiBold";
+    margin-bottom: 10px;
+    margin-right: 350px;
+    font-size: 25px;
 }
 
 .form-container{
     background-color: #0047ab;
-    margin-left: 180px;
-    width: 70%;
+    font-family: "Poppins-Regular";
+    color: white;
+    margin-left: 610px;
+    margin-right: auto;
+    width: 700px;
+    height: 500px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     border-radius: 30px;
     padding-top: 50px;
     padding-bottom: 50px;
-}
-
-.donate-header{
-    text-align: center;
-    font-family: "Poppins-Bold";
 }
 
 .donate-column{
@@ -83,10 +125,6 @@
     border-bottom: solid 2px #ff0000
 }
 
-.error-message{
-    color: red;
-}
-
 .select-field{
     padding-left: 5px;
     font-family: "Poppins-Regular";
@@ -110,36 +148,14 @@
     -webkit-appearance: none;
 }
 
-.cash-quote{
-    font-family: "Poppins-Semibold";
-    text-align: center;
-    font-size: 50px;
-}
-.platform-container h3{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-family: "Poppins-Semibold";
-    padding: 0px 20px 0px 20px;
-}
-
-.platform-container p {
-    width: 100%;
-    text-align: center;
-    padding: 0px 15px 0px 15px;
-    font-family: "Poppins-Regular";
-}
-
 .btnDonate {
     backface-visibility: hidden;
-    background-color: #0047ab;
+    background-color: #ffffff;
     border-radius: 6px;
     border-width: 0;
     box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
     box-sizing: border-box;
-    color: #fff;
+    color: #0047ab;
     cursor: pointer;
     font-family: "Poppins-Regular";
     font-size: 20px;
@@ -161,6 +177,7 @@
 
 .btnDonate:hover{
     background-color: #DF2935;
+    color: white;
 }
 
 .btnDonate:disabled {
@@ -173,115 +190,87 @@
 
 @media screen and (max-width: 600px){
     .cash-quote{
-        font-family: "Poppins-Semibold";
-        text-align: center;
+        display: none;
+    }
+
+    .instruction-box{
+        width: 300px;
+        height: 150px;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 20px;
+        display: block;
+    }
+
+    .cash-header{
         font-size: 20px;
-        width: 94%;
-        padding: 25px 25px 0px 25px;
-    }
-    
-    .payment-container{
-        display: flex;
-        justify-content: center;
-        margin-bottom: 20px;
-        font-family: "Poppins-Medium";
-        width: 94%;
-        background-color: #DF2935;
-    }
-    
-    .payment{
-        width: 100px;
     }
 
-    .platform-container h3{
-        width: 94%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        font-family: "Poppins-Semibold";
-        padding: 0px 20px 0px 20px;
+    .instruction {
+        font-size: 10px;
+        margin-left: 20px;
+        margin-right: 20px;
     }
 
-    .platform-container p {
-        width: 94%;
-        text-align: center;
-        padding: 0px 15px 0px 15px;
-        font-family: "Poppins-Regular";
+    .qrcode-box{
+        width: 300px;
+        height: 140px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 5px;
+        border-radius: 30px;
+        display: block;
     }
 
-    .donate-header{
-        text-align: center;
-        font-family: "Poppins-Bold";
-        font-size: 16px;
+    .qrcode{
+        width: 250px;
+        height: 150px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
 
-    .donation-form{
-        width: 94%;
-        background-color: #ffffff;
+    .form-header{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 15px;
     }
 
     .form-container{
-        background-color: #0047ab;
+        width: 300px;
+        height: 350px;
         margin-left: 35px;
-        width: 80%;
-        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-        border-radius: 20px;
-        padding-top: 15px;
-        padding-bottom: 15px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        font-family: "Poppins-Regular";
-        font-size: 12px;
-        margin-bottom: 40px;
+        margin-right: 35px;
+        margin-bottom: 5px;
+        border-radius: 30px;
     }
 
     .input-field{
         padding-left: 5px;
         font-family: "Poppins-Regular";
-        font-size: 12px;
+        font-size: 10px;
         background-color: transparent;
         border-bottom: solid 1px #000000;
     }
 
     .select-field{
         padding-left: 5px;
-        font-family: "Poppins-Regular";
         font-size: 12px;
-        background-color: transparent;
-        border-bottom: solid 1px #000000;
-        width: 160px;
-        cursor: pointer;
+        width: 120px;
+    }
+
+    .option-gender{
+        font-size: 12px;
     }
 
     .btnDonate {
-        backface-visibility: hidden;
-        background-color: #0047ab;
-        border-radius: 6px;
-        border-width: 0;
-        box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
-        box-sizing: border-box;
-        color: #fff;
-        cursor: pointer;
-        font-family: "Poppins-Regular";
-        font-size: 14px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 220px;
         height: 40px;
-        line-height: 1.15;
-        margin: 12px 100px 0;
-        outline: none;
-        overflow: hidden;
-        padding: 0 25px;
-        position: relative;
-        text-align: center;
-        text-transform: none;
-        transform: translateZ(0);
-        transition: all .2s,box-shadow .08s ease-in;
-        user-select: none;
-        -webkit-user-select: none;
-        touch-action: manipulation;
-        width: 78%;
+        width: 120px;
     }
     
 }

@@ -5,9 +5,9 @@ import axios from 'axios';
 import "./Cash.css"
 import Nav from "../NavigationBar/Nav";
 import Footer from "../Footer/footer";
-// import payment from "./Image/cashpayment.png";
-import Gcash from "./Image/Gcash.png";
-import Paymaya from "./Image/Paymaya.png";
+import Qrcode from "./Image/qrcodes.png";
+import PCBackground from "./Image/cashbackground.jpg";
+import PhoneBackground from "./Image/cashbackground2.jpg";
 import emailjs from '@emailjs/browser';
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
@@ -73,24 +73,37 @@ function DonateNow() {
             }
         });
     }
+
+    const imageUrl = window.innerWidth >= 650 ? PCBackground : PhoneBackground;
     
 return (
     <div>
+        {/*Background Image */}
+        <div className="Background" style={{backgroundImage: `url(${imageUrl})`}}>
         <Nav/>
-        <p className="cash-quote">"Giving is not just about making a decision, it's about making a difference."</p>
-        <div className="payment-container">
-            <img src={Gcash} className="payment"/>
-            <img src={Paymaya} className="payment"/>
-        </div>
-        <div className="platform-container">
-            <h3>CASH DONATION PLATFORMS</h3>
-            <p>Please Fill-Up this form after you donate "For School Reference"</p>
+
+            <p className='cash-quote'>Giving is not just <br></br>
+                                 about making a decision, <br></br>
+                                 it's about making a difference.
+            </p>
+        
+        <div className="instruction-box">
+                    <p className='cash-header'>CASH DONATION</p>
+                    <p className="instruction">Donators that are affiliated to ACLC are required to fill and submit the Cash Donation form.
+                        Outside donators have the choice whether to fill and submit the form or directly donate through
+                        the provided QR codes below.
+                    </p>
         </div>
 
+        <div className='qrcode-box'>
+            <div className='qrcode'><img src={Qrcode}></img></div>
+        </div>
+
+        {/*Donation form*/}
         <div className="donation-form">
             <Formik initialValues={initialValues} onSubmit={onSubmit} validationSchema={validationSchema}>
             <Form className="form-container" ref={form}>
-            <h1 className="donate-header">IN CASH DONATION</h1>
+            <h1 className="form-header">Cash Donation Form</h1>
                 <div className="donate-column">
                     <Field
                         className="select-field"
@@ -180,7 +193,7 @@ return (
                     <ErrorMessage name="transactionID" element={<span />}/>
                     <br/>
                 </div>
-                <button type="submit" className='btnDonate'>Donate</button>
+                <button type="submit" className='btnDonate'>Submit</button>
                 <ToastContainer
                     position="top-center"
                     autoClose={2000}
@@ -195,6 +208,8 @@ return (
                 />
             </Form>
         </Formik>
+        </div>
+        <br></br>
         </div>
         <Footer/>
     </div>

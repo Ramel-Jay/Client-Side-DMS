@@ -94,7 +94,7 @@ return (
                             </button>
                             <button onClick={() => navigate("/inKind")}>
                                 <MdToys onClick={() => navigate("/inKind")} className="home-cash-logo"/>
-                                <p>Items</p>
+                                <p>In Kind</p>
                             </button>
                         </div>
                     </div>

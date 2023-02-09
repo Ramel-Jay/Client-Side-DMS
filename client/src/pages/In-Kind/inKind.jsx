@@ -5,7 +5,9 @@ import axios from 'axios';
 import "./InKind.css"
 import Nav from "../NavigationBar/Nav"
 import Footer from "../Footer/footer";
-import payment from "./Image/kindpayment.png";
+import Address from "./Image/address.png";
+import PCBackground from "./Image/kindbackground.jpg";
+import PhoneBackground from "./Image/kindbackground2.jpg";
 import emailjs from '@emailjs/browser';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -75,20 +77,36 @@ function InKind() {
             }
         });
     }
+
+    const imageUrl = window.innerWidth >= 650 ? PCBackground : PhoneBackground;
+
 return (
-    <div className="donate">
+    <div>
+        {/*Background Image */}
+        <div className="Background" style={{backgroundImage: `url(${imageUrl})`}}>
         <Nav/>
-        <p className="cash-quote">"Real generosity towards the future lies in giving all to the present."</p>
-        <div className="address">
-        <img src={payment} className="kindpayment-method"/>
-        <h3 style={{ textAlign:"center" }}><br></br>IN KIND DONATION DELIVERY ADDRESS</h3>
+
+        <p className='kind-quote'>Real generosity <br></br>
+                                towards the future lies <br></br>
+                                in giving all to the present.
+        </p>
+        
+        <div className="kindinstruction-box">
+                    <p className='kind-header'>IN KIND DONATION</p>
+                    <p className="instruction">All donators, affiliated with ACLC or not, must fill and submit the In Kind
+                                                Donation Form after sending your donation to the delivery address below.
+                    </p>
+        </div>
+
+        <div className='address-box'>
+            <div className='address'><img src={Address}></img></div>
         </div>
 
         <div className="donation-form">
         <Formik initialValues={initialValues} onSubmit={onSubmit} validationSchema={validationSchema}>
             {({setFieldValue}) => (
-            <Form className="form-container" ref={form}>
-                <h1 className="donate-header">IN KIND DONATION</h1>
+            <Form className="kindform-container" ref={form}>
+                <h1 className="form-header">In Kind Donation form</h1>
                 <div className="donate-column">
 
                 <Field 
@@ -231,7 +249,7 @@ return (
                     <ErrorMessage name="RNum" element={<span />}/>
                     <br/>
                 </div>
-                <button type="submit" className='btnDonate'>Donate</button>
+                <button type="submit" className='btnDonate'>Submit</button>
                 <ToastContainer
                     position="top-center"
                     autoClose={2000}
@@ -247,6 +265,8 @@ return (
             </Form>
             )}
         </Formik>
+        </div>
+        <br></br>
         </div>
         <Footer/>
     </div>
