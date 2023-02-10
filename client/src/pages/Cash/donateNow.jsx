@@ -81,6 +81,8 @@ return (
         <div className="Background" style={{backgroundImage: `url(${imageUrl})`}}>
         <Nav/>
 
+        <br></br><br></br><br></br><br></br>
+
             <p className='cash-quote'>Giving is not just <br></br>
                 about making a decision, <br></br>
                 it's about making a difference.

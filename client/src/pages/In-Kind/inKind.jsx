@@ -87,6 +87,8 @@ return (
         <div className="Background" style={{backgroundImage: `url(${imageUrl})`}}>
         <Nav/>
 
+        <br></br><br></br><br></br><br></br>
+
         <p className='kind-quote'>Real generosity <br></br>
             towards the future lies <br></br>
             in giving all to the present.

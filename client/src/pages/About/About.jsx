@@ -16,7 +16,7 @@ function About() {
 return (
     <div>
         <Nav/>
-        <br></br><br></br>
+        <br></br><br></br><br></br><br></br><br></br><br></br>
         <p className="about-header">ABOUT US</p>
         <br></br>
 
