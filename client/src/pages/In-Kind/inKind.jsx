@@ -33,7 +33,8 @@ function InKind() {
         rName: "",
         rNum: "",
         request: 0,
-        username: "Pending"
+        username: "None",
+        status: "Pending"
     }
 
     const validationSchema = Yup.object().shape({
@@ -51,11 +52,26 @@ function InKind() {
         rNum: Yup.number().required(),
         request: Yup.number().required(),
         username: Yup.string().required(),
+        status: Yup.string().required(),
     });
     
     const onSubmit = (data) => {
         axios.post("http://localhost:3001/inkind", data).then((response) => {
             if (response.data) {
+                if(response.data === "Duplicate Entry")
+                {
+                    toast.error('Donation Success', {
+                        position: "top-center",
+                        autoClose: 2000,
+                        hideProgressBar: true,
+                        closeOnClick: true,
+                        pauseOnHover: false,
+                        draggable: false,
+                        progress: undefined,
+                        theme: "light",
+                    });
+                    return;
+                }
                 emailjs.sendForm('service_hq85ypr', 'template_exbhjbi', form.current, '5LX1ionb-UB4rjsW0')
                 .then((response) => {
                     console.log(response.text);
@@ -253,6 +269,7 @@ return (
                         className="input-field"
                         id="donateNowPost"
                         name="rNum"
+                        type="number"
                         placeholder="Tracking Number"
                     />
                     <ErrorMessage name="RNum" element={<span />}/>

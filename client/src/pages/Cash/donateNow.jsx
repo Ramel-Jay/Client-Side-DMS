@@ -49,6 +49,21 @@ function DonateNow() {
     const onSubmit = (data) => {
         axios.post("http://localhost:3001/cash", data).then((response) => {
             if (response.data) {
+                if(response.data === "Duplicate Entry")
+                {
+                    toast.error('Duplicate Entry', {
+                        position: "top-center",
+                        autoClose: 2000,
+                        hideProgressBar: true,
+                        closeOnClick: true,
+                        pauseOnHover: false,
+                        draggable: false,
+                        progress: undefined,
+                        theme: "light",
+                    });
+                    return;
+                }
+                console.log(response.data);
                 emailjs.sendForm('service_hq85ypr', 'template_exbhjbi', form.current, '5LX1ionb-UB4rjsW0')
                 .then((response) => {
                     console.log(response.text);
@@ -62,12 +77,11 @@ function DonateNow() {
                         progress: undefined,
                         theme: "light",
                     });
-                    initialValues();
                 }, (error) => {
-                    console.log(error.text);
+                    alert(error);
                 });
             }
-            else {
+            if (response.data.error) {
                 alert("Unsuccessful Donation");
             }
         });
