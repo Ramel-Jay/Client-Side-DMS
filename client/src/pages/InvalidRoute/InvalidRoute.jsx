@@ -8,7 +8,6 @@ function InvalidRoute() {
 return (
     <div>
         <Nav/>
-        <br></br><br></br><br></br><br></br>
         <div className='error'><img src={Error}/></div>
         <Footer/>
     </div>

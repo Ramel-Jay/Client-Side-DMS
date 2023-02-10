@@ -7,9 +7,8 @@ function Contacts() {
 return (
     <div>
         <Nav/>
-        <br></br><br></br><br></br><br></br><br></br><br></br>
+
         <p className="contacts-header">CONTACT US</p>
-        <br></br>
 
         <div className="contacts-container">
             <div className="inquiries-container">

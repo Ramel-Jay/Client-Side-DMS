@@ -27,7 +27,7 @@
     background: #0047ab;
     width: 700px;
     height: 210px;
-    margin-left: 610px;
+    margin-left: 560px;
     margin-right: auto;
     margin-bottom: 20px;
     margin-top: 60px;
@@ -54,7 +54,7 @@
     background: #ffffff;
     width: 700px;
     height: 270px;
-    margin-left: 610px;
+    margin-left: 560px;
     margin-right: auto;
     margin-bottom: 20px;
     margin-top: 20px;
@@ -82,7 +82,7 @@
     background-color: #0047ab;
     font-family: "Poppins-Regular";
     color: #b8b7b7;
-    margin-left: 610px;
+    margin-left: 560px;
     margin-right: auto;
     width: 700px;
     height: 600px;
@@ -190,12 +190,16 @@
 }
 
 @media screen and (max-width: 600px){
+    .Background{
+        width: 350px;
+    }
+
     .kind-quote{
         display: none;
     }
 
     .kindinstruction-box{
-        width: 300px;
+        width: 280px;
         height: 150px;
         margin-left: 18px;
         margin-right: auto;
@@ -215,7 +219,7 @@
     }
 
     .address-box{
-        width: 300px;
+        width: 280px;
         height: 140px;
         margin-left: 18px;
         margin-right: auto;
@@ -240,12 +244,12 @@
     }
 
     .kindform-container{
-        width: 300px;
+        width: 280px;
         height: 450px;
         margin-left: 15px;
         margin-right: 35px;
         margin-bottom: 5px;
-        border-radius: 30px;
+        border-radius: 15px;
     }
 
     .input-field{
