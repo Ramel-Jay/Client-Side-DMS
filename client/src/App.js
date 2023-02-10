@@ -13,9 +13,9 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" exact element={<Home />} />
-          <Route path="/donateNow" exact element={<DonateNow />} />
-          <Route path="/about" exact element={<About />} />
-          <Route path="/inKind" exact element={<InKind />} />
+          <Route path="/Cash" exact element={<DonateNow />} />
+          <Route path="/About" exact element={<About />} />
+          <Route path="/In-Kind" exact element={<InKind />} />
           <Route path="/Contact" exact element={<Contact />} />
           <Route path="*" element={<InvalidRoute />} />
         </Routes>

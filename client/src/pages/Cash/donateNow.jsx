@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import {Formik, Form, Field, ErrorMessage} from "formik";
 import * as Yup from "yup";
 import axios from 'axios';
@@ -9,7 +9,6 @@ import Qrcode from "./Image/qrcodes.png";
 import PCBackground from "./Image/cashbackground.jpg";
 import PhoneBackground from "./Image/cashbackground2.jpg";
 import emailjs from '@emailjs/browser';
-import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -17,8 +16,7 @@ import 'react-toastify/dist/ReactToastify.css';
 function DonateNow() {
 
     const form = useRef();
-
-    const navigate = useNavigate();
+    const [otherOption, setOtherOption] = useState(false);
 
     const initialValues = {
         type: "",
@@ -42,7 +40,7 @@ function DonateNow() {
         number: Yup.number().required(),
         address: Yup.string().min(10, "Short Address").required(),
         gender: Yup.string().required().notOneOf([""], "Please select a Gender"),
-        amount: Yup.number().required(),
+        amount: Yup.number().required().notOneOf([""], "Please select an amount or enter an amount"),
         transactionID: Yup.number().required(),
         request: Yup.number().required(),
         username: Yup.string().required(),
@@ -64,6 +62,7 @@ function DonateNow() {
                         progress: undefined,
                         theme: "light",
                     });
+                    initialValues();
                 }, (error) => {
                     console.log(error.text);
                 });
@@ -102,6 +101,7 @@ return (
         {/*Donation form*/}
         <div className="donation-form">
             <Formik initialValues={initialValues} onSubmit={onSubmit} validationSchema={validationSchema}>
+            {({setFieldValue}) => (
             <Form className="form-container" ref={form}>
             <h1 className="form-header">Cash Donation Form</h1>
                 <div className="donate-column">
@@ -171,24 +171,39 @@ return (
                     <option value="" className="option-gender">Gender</option>
                     <option value="Male" className="option-gender">Male</option>
                     <option value="Female" className="option-gender">Female</option>
+                    <option value="Decline to State" className="option-gender"> Decline to State</option>
                     </Field>
                     <ErrorMessage name="gender" element={<span />}/>
                     <br/>
-                    <Field
-                        className="input-field"
-                        id="donateNowPost"
-                        name="amount"
-                        type="number"
-                        placeholder="Amount"
-                    />
-                    <ErrorMessage name="amount" element={<span />}/>
+                    
+                    <Field 
+                    as="select" 
+                    name="amount"
+                    className="select-field" 
+                    onChange={(e) => {
+                    setFieldValue('amount', e.target.value);
+                    setOtherOption(e.target.value === 'Others');
+                    }}>
+                        <option value="" className="option-gender">Select Amount</option>
+                        <option value="20" className="option-gender">20</option>
+                        <option value="50" className="option-gender">50</option>
+                        <option value="100" className="option-gender">100</option>
+                        <option value="500" className="option-gender">500</option>
+                        <option value="1000" className="option-gender">1000</option>
+                        <option value="Others" className="option-gender">Others</option>
+                    </Field>
                     <br/>
+                    {otherOption && (
+                        <Field type="number" name="amount" placeholder="Input Type" className="input-field" />
+                    )}
+                    <br/>
+
                     <Field
                         className="input-field"
                         id="donateNowPost"
                         name="transactionID"
                         type="number"
-                        placeholder="Transaction ID"
+                        placeholder="Reference Number"
                     />
                     <ErrorMessage name="transactionID" element={<span />}/>
                     <br/>
@@ -207,6 +222,7 @@ return (
                     theme="light"
                 />
             </Form>
+            )}
         </Formik>
         </div>
         <br></br>

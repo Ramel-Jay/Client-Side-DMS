@@ -39,7 +39,7 @@ function Nav() {
                 <div className="wide-nav">
                     <p onClick={() => navigate("/")}>Home</p>
                     <p onClick={() => setModal(true)}>Donate</p>
-                    <p onClick={() => navigate("/about")}>About</p>
+                    <p onClick={() => navigate("/About")}>About</p>
                     <p onClick={() => navigate("/Contact")}>Contact</p>
                 </div>
                 <div className="toggle" onClick={handleToggle}>
@@ -76,12 +76,12 @@ function Nav() {
                             <h3>Select your donation type</h3>
                         </div>
                         <div className="home-modal-body">
-                            <button onClick={() => navigate("/donateNow")}>
-                                <GiReceiveMoney onClick={() => navigate("/donateNow")} className="home-cash-logo"/>
+                            <button onClick={() => navigate("/Cash")}>
+                                <GiReceiveMoney onClick={() => navigate("/Cash")} className="home-cash-logo"/>
                                 <p>Cash</p>
                             </button>
-                            <button onClick={() => navigate("/inKind")}>
-                                <MdToys onClick={() => navigate("/inKind")} className="home-cash-logo"/>
+                            <button onClick={() => navigate("/In-Kind")}>
+                                <MdToys onClick={() => navigate("/In-Kind")} className="home-cash-logo"/>
                                 <p>In Kind</p>
                             </button>
                         </div>

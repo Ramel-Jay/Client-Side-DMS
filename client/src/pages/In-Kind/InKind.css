@@ -81,7 +81,7 @@
 .kindform-container{
     background-color: #0047ab;
     font-family: "Poppins-Regular";
-    color: white;
+    color: #b8b7b7;
     margin-left: 610px;
     margin-right: auto;
     width: 700px;
@@ -114,6 +114,7 @@
     font-size: 20px;
     background-color: transparent;
     border-bottom: solid 2px #000000;
+    color: white;
 }
 
 .input-field::placeholder{

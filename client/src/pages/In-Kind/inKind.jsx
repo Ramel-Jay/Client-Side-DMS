@@ -17,6 +17,7 @@ function InKind() {
 
     const form = useRef();
     const [otherOption, setOtherOption] = useState(false);
+    const [courierType, setCourierType] = useState(false);
 
     const initialValues = {
         classification: "",
@@ -46,7 +47,7 @@ function InKind() {
         type: Yup.string().required().notOneOf([""], "Please Select a Type of Item"),
         quantity: Yup.number().required(),
         amount: Yup.number().required(),
-        rName: Yup.string().required(),
+        rName: Yup.string().required().notOneOf([""], "Please Select Courier Name"),
         rNum: Yup.number().required(),
         request: Yup.number().required(),
         username: Yup.string().required(),
@@ -113,19 +114,12 @@ return (
                     as="select" 
                     name="classification"
                     className="select-field" 
-                    onChange={(e) => {
-                    setFieldValue('classification', e.target.value);
-                    setOtherOption(e.target.value === 'other');
-                }}>
+                >
                     <option value="" className="option-gender">Classification</option>
                     <option value="Student" className="option-gender">Student</option>
                     <option value="Employee" className="option-gender">Employee</option>
-                    <option value="other" className="option-gender">Other</option>
+                    <option value="Others" className="option-gender">Others</option>
                 </Field>
-                <br/>
-                {otherOption && (
-                    <Field type="text" name="classification" placeholder="Input Type" className="input-field" />
-                )}
                 <br/>
 
                     <Field 
@@ -186,6 +180,7 @@ return (
                     <option value="" className="option-gender">Gender</option>
                     <option value="Male" className="option-gender">Male</option>
                     <option value="Female" className="option-gender">Female</option>
+                    <option value="Decline to State" className="option-gender">Decline to State</option>
                     </Field>
                     <ErrorMessage name="gender" element={<span />}/>
                     <br/>
@@ -196,15 +191,15 @@ return (
                     className="select-field" 
                     onChange={(e) => {
                     setFieldValue('type', e.target.value);
-                    setOtherOption(e.target.value === 'other');
+                    setOtherOption(e.target.value === 'Others');
                     }}>
-                        <option value="" className="option-gender">Select Type Of Item</option>
-                        <option value="Can Goods" className="option-gender">Can Goods</option>
-                        <option value="Aid Kit" className="option-gender">Aid Kit</option>
-                        <option value="Cloth" className="option-gender">Cloth</option>
+                        <option value="" className="option-gender">Select Item</option>
+                        <option value="Canned Goods" className="option-gender">Canned Goods</option>
+                        <option value="Medicines/Vitamins" className="option-gender">Medicines/Vitamins</option>
+                        <option value="Clothes" className="option-gender">Clothes</option>
                         <option value="Toys" className="option-gender">Toys</option>
                         <option value="School Supplies" className="option-gender">School Supplies</option>
-                        <option value="other" className="option-gender">Other</option>
+                        <option value="Others" className="option-gender">Others</option>
                     </Field>
                     <br/>
                     {otherOption && (
@@ -230,14 +225,26 @@ return (
                     />
                     <ErrorMessage name="amount" element={<span />}/>
                     <br/>
-                    
-                    <Field
-                        className="input-field"
-                        id="donateNowPost"
-                        name="rName"
-                        placeholder="Rider Name"
-                    />
-                    <ErrorMessage name="RName" element={<span />}/>
+
+                    <Field 
+                    as="select" 
+                    name="rName"
+                    className="select-field" 
+                    onChange={(e) => {
+                    setFieldValue('rName', e.target.value);
+                    setCourierType(e.target.value === 'Others');
+                    }}>
+                        <option value="" className="option-gender">Courier Name</option>
+                        <option value="J&T" className="option-gender">J&T</option>
+                        <option value="LBC" className="option-gender">LBC</option>
+                        <option value="Ninja Van" className="option-gender">Ninja Van</option>
+                        <option value="2GO" className="option-gender">2GO</option>
+                        <option value="Others" className="option-gender">Others</option>
+                    </Field>
+                    <br/>
+                    {courierType && (
+                        <Field type="text" name="rName" placeholder="Input Type" className="input-field" />
+                    )}
                     <br/>
                     
                     <Field
