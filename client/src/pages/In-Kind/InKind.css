@@ -196,10 +196,11 @@
     .kindinstruction-box{
         width: 300px;
         height: 150px;
-        margin-left: auto;
+        margin-left: 18px;
         margin-right: auto;
-        border-radius: 20px;
+        border-radius: 15px;
         display: block;
+        padding: 10px;
     }
 
     .kind-header{
@@ -215,10 +216,10 @@
     .address-box{
         width: 300px;
         height: 140px;
-        margin-left: auto;
+        margin-left: 18px;
         margin-right: auto;
         margin-bottom: 5px;
-        border-radius: 30px;
+        border-radius: 15px;
         display: block;
     }
 
@@ -240,7 +241,7 @@
     .kindform-container{
         width: 300px;
         height: 450px;
-        margin-left: 35px;
+        margin-left: 15px;
         margin-right: 35px;
         margin-bottom: 5px;
         border-radius: 30px;

@@ -87,8 +87,8 @@ return (
         <Nav/>
 
         <p className='kind-quote'>Real generosity <br></br>
-                                towards the future lies <br></br>
-                                in giving all to the present.
+            towards the future lies <br></br>
+            in giving all to the present.
         </p>
         
         <div className="kindinstruction-box">

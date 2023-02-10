@@ -27,7 +27,7 @@
     background: #0047ab;
     width: 700px;
     height: 210px;
-    margin-left: 610px;
+    margin-left: 560px;
     margin-right: auto;
     margin-bottom: 20px;
     margin-top: 60px;
@@ -54,7 +54,7 @@
     background: #ffffff;
     width: 700px;
     height: 270px;
-    margin-left: 610px;
+    margin-left: 560px;
     margin-right: auto;
     margin-bottom: 20px;
     margin-top: 20px;
@@ -82,7 +82,7 @@
     background-color: #0047ab;
     font-family: "Poppins-Regular";
     color: white;
-    margin-left: 610px;
+    margin-left: 560px;
     margin-right: auto;
     width: 700px;
     height: 500px;
@@ -189,17 +189,24 @@
 }
 
 @media screen and (max-width: 600px){
+    .Background{
+        width: 350px;
+    }
+
     .cash-quote{
         display: none;
     }
 
     .instruction-box{
-        width: 300px;
+        width: 280px;
         height: 150px;
-        margin-left: auto;
+        margin-left: 23px;
         margin-right: auto;
-        border-radius: 20px;
-        display: block;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .cash-header{
@@ -213,12 +220,12 @@
     }
 
     .qrcode-box{
-        width: 300px;
+        width: 280px;
         height: 140px;
-        margin-left: auto;
+        margin-left: 24px;
         margin-right: auto;
         margin-bottom: 5px;
-        border-radius: 30px;
+        border-radius: 15px;
         display: block;
     }
 
@@ -238,12 +245,13 @@
     }
 
     .form-container{
-        width: 300px;
+        width: 280px;
         height: 350px;
-        margin-left: 35px;
+        margin-left: 24px;
         margin-right: 35px;
         margin-bottom: 5px;
-        border-radius: 30px;
+        border-radius: 15px;
+        padding: 20px;
     }
 
     .input-field{
@@ -252,12 +260,13 @@
         font-size: 10px;
         background-color: transparent;
         border-bottom: solid 1px #000000;
+        width: 100px;
     }
 
     .select-field{
         padding-left: 5px;
         font-size: 12px;
-        width: 120px;
+        width: 2px;
     }
 
     .option-gender{

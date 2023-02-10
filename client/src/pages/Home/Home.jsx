@@ -107,12 +107,18 @@ return (
         <h1 className='drivetitle'>RECENT DONATION DRIVE ACTIVITIES</h1>
             <div data-aos="fade-down-right" className="img-container">
                 <img src={post1} className="img1"/>
-                <p className="img-description">Last January 8, 2022, ACLC Cares, along with the SSC, The Marquee, and the Association of Hospitality Management Students distributed relief goods to the members of the Southern Leyte Baptist Mission and the residents of Brgy. Tampoong (where the mission church is situated) Sogod Southern Leyte.
+                <div className="post-container">
+                    <h6 className="post-header">Relief Operation In Sogod</h6>
+                    <p className="img-description">Last January 8, 2022, ACLC Cares, along with the SSC, The Marquee, and the Association of Hospitality Management Students distributed relief goods to the members of the Southern Leyte Baptist Mission and the residents of Brgy. Tampoong (where the mission church is situated) Sogod Southern Leyte.
                     The distribution was spearheaded by missionary Pastor Alfred Cabrigas and his wife Ma'am Hazel Cabrigas together with Christian Jaralbio, a church intern. </p>
+                </div>
             </div>
             <div data-aos="fade-down-left" className="img-container">
                 <img src={post2} className="img1"/>
-                <p className="img-description">ACLC Cares went to Tabangi, Southern Leyte for the 2nd wave of its relief operations, distributing relief goods to the victims of Typhoon Odette in the area. A total of P67,262.00 was raised from the students (both SHS and College) and employees last December to January.</p>
+                <div className="post-container">
+                    <h6 className="post-header">Lorem Ipsum header</h6>
+                    <p className="img-description">ACLC Cares went to Tabangi, Southern Leyte for the 2nd wave of its relief operations, distributing relief goods to the victims of Typhoon Odette in the area. A total of P67,262.00 was raised from the students (both SHS and College) and employees last December to January.</p>
+                </div>
             </div>
         </div>
 

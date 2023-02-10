@@ -326,20 +326,36 @@
     font-family: "Poppins-Regular";
 }
 
+.post-container{
+    padding: 20px;
+}
+
+.post-header {
+    font-family: "Poppins-Semibold";
+    margin-left: 30px;
+    font-size: 30px;
+}
+
 @media  screen and (max-width: 600px) {
 
     .drivetitle{
-        font-size: 25px;
+        font-size: 20px;
         padding: 10px;
+        width: 350px;
+        font-family: "Poppins-Semibold";
+    }
+
+    .post-header{
+        font-size: 15px;
     }
 
     .slideshow-image{
-        width: 100%;
+        width: 350px;
         height: 50vw;
     }
 
     .intro{
-        width: 100%;
+        width: 350px;
         left: 5%;
         padding-top: 5vw;
         text-align: center;
@@ -369,7 +385,7 @@
     }
 
     .body-container{
-        width: 100%;
+        width: 350px;
         display: flex;
         flex-direction: column;
     }

@@ -83,8 +83,8 @@ return (
         <Nav/>
 
             <p className='cash-quote'>Giving is not just <br></br>
-                                 about making a decision, <br></br>
-                                 it's about making a difference.
+                about making a decision, <br></br>
+                it's about making a difference.
             </p>
         
         <div className="instruction-box">
